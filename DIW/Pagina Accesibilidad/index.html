@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matando pulgas a cañonazos y pulpo como animal de compañia">
+    <title>¿Que es la accesibilidad?</title>
+    <meta name="description" content="Esta página esta dedicada teoricamente al tema de la accesibilidad en al web">
+    <meta name="author" content="Iván Recio Heras">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <div class="justify-content-center">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                <div class="container-fluid"> 
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link enlaces_nav"  href="#accesibilidad">Accesibilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link enlaces_nav"  href="#discapacidad">Discapacidades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link enlaces_nav" href="#niveles">Niveles de Accesibilidad</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link enlaces_nav" href="#criterios">Criterios de Conformidad</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+              </nav>
+        </header>
+        <main>
+            <div id="accesibilidad" class="margenArriba"></div>
+            <h1 class="primer_titulo">¿QUÉ ES LA ACCESIBILIDAD?</h1>
+            <div class="inicio">
+                <div class="primer_texto sombra row">
+                    <p class="primer_parrafo col-12 col-md-7 col-sm-12">La accesibilidad web tiene como objetivo lograr que las páginas web sean utilizables por el máximo número de personas, independientemente de sus conocimientos o capacidades personales e independientemente de las características técnicas del equipo utilizado para acceder a la Web. Esto combina la programación, el diseño y la tecnología para construir un Internet sin barreras que permita a todos los usuarios el entendimiento, el aprendizaje, la navegación y la plena interacción con la web. Antes de que nadie pueda hacer su sitio web accesible, debe comprender la accesibilidad, debe comprometerse a garantizar la accesibilidad, debe aprender a aplicar la accesibilidad y debe entender sus obligaciones legales.</p>
+                    <img src="media/img/accesibilidad.jpg" class="imagen_primer_parrafo col-12 col-md-12 col-sm-12" alt="Accesibilidad">
+                </div>
+                <div class="cartas_primera_parte mt-2 row justify-content-center">
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3">
+                        <h2 class="titulo_carta">Conocimiento</h2>
+                        <p>La base de cualquier tipo de compromiso con la accesibilidad web comienza con ser consciente del tema. La mayoría de los desarrolladores web no se oponen a la idea de hacer que Internet sea accesible para las personas con discapacidad. La mayoría de los errores de accesibilidad en los sitios web son el resultado de la falta de conocimiento.
+                        </p>
+                    </div>
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3">
+                        <h2 class="titulo_carta">Liderazgo</h2>
+                        <p>La comprensión del tema es un primer paso importante, pero no resuelve el problema, especialmente en las grandes organizaciones. Si la dirección de una organización no expresa su compromiso hacia la accesibilidad web, pocas son las posibilidades de que el contenido web de la organización sea accesible.</p>
+                    </div>
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3">
+                        <h2 class="titulo_carta">Politicas y Procedimientos</h2>
+                        <p>Aun cuando los dirigentes expresan su compromiso con una idea, si la idea no está respaldada por normas de conducta, la idea tenderá a perderse entre la rutina del día a día. El mejor enfoque para una organización grande es crear una política interna que resuma las normas, procedimientos y métodos para supervisar su cumplimiento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="margen" id="discapacidad"></div>
+            <div class="mt-5 justify-content-center row">
+                <h1 class="titulo_segundo p-4">TIPOS DE DISCAPACIDADES</h1>
+                <div class="segunda_parte col-11 col-sm-11 col-md-11 col-lg-9 row">
+                    <div class="mt-4 mb-4 me-3 col-12 col-sm-12 col-md-12 col-lg-6">
+                        <p class="segundo_parrafo">Aunque las estimaciones varían, la mayoría de los estudios estiman que aproximadamente una quinta parte (20%) de la población tiene algún tipo de discapacidad. No todas estas personas tienen discapacidades que dificultan su acceso a Internet, pero sigue siendo una parte importante de la población. Las empresas serían imprudentes al excluir deliberadamente 20, 10, o incluso un 5 por ciento de sus clientes potenciales de sus sitios web. Para las escuelas, universidades y entidades gubernamentales no sería sólo imprudente, pero en muchos casos, también violaría la ley.</p>
+                    </div>
+                    <div class="parte_lista col-12 col-sm-12 col-md-12 col-lg-5 mt-4 mb-4 ms-3 ">
+                        <div class="lista par"><i class="icono fa-solid fa-eye fa-2xl"></i><p class="parrafo_lista">Visual -> La ceguera, baja visión o ceguera al color</p></div>
+                        <div class="lista impar mt-4"><i class="icono fa-solid fa-ear-listen fa-2xl"></i><p class="parrafo_lista">Audicion -> La sordera.</p></div>
+                        <div class="lista par mt-4"><i class="icono fa-solid fa-hand fa-2xl"></i><p class="parrafo_lista">Motor -> La incapacidad de poder usar un ratón.</p></div>
+                        <div class="lista impar mt-4"><i class="icono fa-solid fa-brain fa-2xl"></i><p class="parrafo_lista">Cognitivo -> Dificultades de aprendizaje, concentración o incapacidad.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="margen" id="niveles"></div>
+            <div class="mt-5 justify-content-center">
+                <h1 class="titulo_segundo p-4">NIVELES DE ACCESIBILIDAD</h1>
+                <div class="cartas_primera_parte mt-2 row justify-content-center">
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3 amarillo">
+                        <h2 class="titulo_carta">Nivel A</h2>
+                        <p class="mb-4">Es el menos exigente e incluye las páginas que cumplen ciertos criterios de conformidad determinados por la WCAG como, por ejemplo, la disponibilidad de subtítulos para audios grabados o las alternativas de texto para contenidos audiovisuales.
+                        </p>
+                    </div>
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3 naranja">
+                        <h2 class="titulo_carta ">Nivel AA</h2>
+                        <p class="mb-4">Es el intermedio y el más requerido por las entidades que expiden certificaciones de accesibilidad web. Reúne los sitios web que respetan criterios más avanzados como la disponibilidad de subtítulos para audios en directo, la audiodescripción, el tamaño de texto aumentable.</p>
+                    </div>
+                    <div class="carta sombra col-12 col-sm-11 col-md-12 col-lg-3 rojo">
+                        <h2 class="titulo_carta">Nivel AAA</h2>
+                        <p class="mb-4">Es el más estricto y agrupa las webs que cumplen con los criterios más exigentes, como la interpretación por lengua de signos, la audiodescripción ampliada, la explicación de las abreviaturas, la ausencia de elementos que destellan más de tres veces por segundo, etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="margen" id="criterios"></div>
+            <div class="mt-5 justify-content-center">
+                <h1 class="titulo_segundo p-4">CRITERIOS DE CONFORMIDAD</h1>
+                <div class="justify-content-center">
+
+                    <table class="tabla_criterios mostrar">
+                        <thead>
+                            <tr class="parte_tabla verde altura_indice">
+                                <th class="borde_inicio">Principios</th>
+                                <th>Perceptibilidad</th>
+                                <th>Operabilidad</th>
+                                <th>Compensabilidad</th>
+                                <th class="borde_fin">Robustez</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="parte_tabla amarillo">
+                                <td class="texto_tbl borde_inicio">Nivel A</td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Textos alternativos</li>
+                                        <li class="texto_tbl">Videos y audios pregrabados</li>
+                                        <li class="texto_tbl">Independencia de la presentación</li>
+                                        <li class="texto_tbl">Contrastes de los colores</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Teclado, atajos y foco</li>
+                                        <li class="texto_tbl">Control de temporizadores y movimiento</li>
+                                        <li class="texto_tbl">Parpadeo de contenido</li>
+                                        <li class="texto_tbl">Titulos y enlaces</li>
+                                        <li class="texto_tbl">Orden de elementos y tabulación</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Cambio de idioma</li>
+                                        <li class="texto_tbl">Foco y cambio de contextos</li>
+                                        <li class="texto_tbl">Señalización de actuación y errores</li>
+                                    </ul>
+                                </td>
+                                <td class="borde_fin">
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Correcto marcado de etiquetas</li>
+                                        <li class="texto_tbl">Identificadors y atributos no repetidos</li>
+                                        <li class="texto_tbl">Interfaz de usuario</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="parte_tabla naranja">
+                                <td  class="texto_tbl borde_inicio">Nivel AA</td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Subtitulos en videos en directo</li>
+                                        <li class="texto_tbl">Auto completado</li>
+                                        <li class="texto_tbl">Textos: Ampliación y contrastes</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Ubicación del usuario en la web</li>
+                                        <li class="texto_tbl">Titulos y enlaces descriptivos</li>
+                                        <li class="texto_tbl">Diversos accesos a las páginas</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Cambiar idiomas de textos</li>
+                                        <li class="texto_tbl">Mecanismos de navegación</li>
+                                        <li class="texto_tbl">Errores y sugerencias</li>
+                                        <li class="texto_tbl">Compromisos legales o transiciones financieras</li>
+                                    </ul>
+                                </td>
+                                <td class="borde_fin">
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Presentacion de mensajes de estado</li>
+                                        <li class="texto_tbl">Información sobre idiomas</li>
+                                    </ul>
+                                </td>
+
+                            </tr>
+                            <tr class="parte_tabla rojo">
+                                <td class="texto_tbl borde_inicio">Nivel AAA</td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Lenguaje de señas</li>
+                                        <li class="texto_tbl">Descripción y alternativas audio y multimedia</li>
+                                        <li class="texto_tbl">Semántica etiquetas HTML</li>
+                                        <li class="texto_tbl">Mayor contraste</li>
+                                        <li class="texto_tbl">Eliminar ruido en audio</li>
+                                        <li class="texto_tbl">Sin imagenes de textos</li>
+                                    </ul class="lista_tbl_crt">
+                                </td>
+                                <td>
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Interfaz de teclado</li>
+                                        <li class="texto_tbl">Sesión de usuario</li>
+                                        <li class="texto_tbl">Parpadeo del contenido</li>
+                                        <li class="texto_tbl">Desactivar animaciones</li>
+                                        <li class="texto_tbl">Organizacion de titulos y enlaces</li>
+                                    </ul>
+                                </td>
+                                <td> 
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Definiciones para palabras inusuales, jergas y modismos</li>
+                                        <li class="texto_tbl">Significado de abreviaturas</li>
+                                        <li class="texto_tbl">Pronunciación</li>
+                                        <li class="texto_tbl">Ayuda y prevención de errores</li>
+                                    </ul>
+                                </td>
+                                <td class="borde_fin">
+                                    <ul class="lista_tbl_crt">
+                                        <li class="texto_tbl">Animación por interacciones</li>
+                                        <li class="texto_tbl">Mecanismos de entrada concurrentes</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="criterios_movil">
+                        <div class="amarillo mt-5">
+                            <h3 class="titulo_crt">Nivel A</h3>
+                            <ul class="lista_tbl_crt">
+                                <li class="texto_tbl">Textos alternativos</li>
+                                <li class="texto_tbl">Videos y audios pregrabados</li>
+                                <li class="texto_tbl">Independencia de la presentación</li>
+                                <li class="texto_tbl">Contrastes de los colores</li>
+                                <li class="texto_tbl">Teclado, atajos y foco</li>
+                                <li class="texto_tbl">Control de temporizadores y movimiento</li>
+                                <li class="texto_tbl">Parpadeo de contenido</li>
+                                <li class="texto_tbl">Titulos y enlaces</li>
+                                <li class="texto_tbl">Orden de elementos y tabulación</li>
+                                <li class="texto_tbl">Cambio de idioma</li>
+                                <li class="texto_tbl">Foco y cambio de contextos</li>
+                                <li class="texto_tbl">Señalización de actuación y errores</li>
+                                <li class="texto_tbl">Correcto marcado de etiquetas</li>
+                                <li class="texto_tbl">Identificadors y atributos no repetidos</li>
+                                <li class="texto_tbl">Interfaz de usuario</li>
+                            </ul>
+                        </div>
+                        <div class="naranja mt-5">
+                            <h3 class="titulo_crt">Nivel AA</h3>
+                            <ul class="lista_tbl_crt">
+                                <li class="texto_tbl">Subtitulos en videos en directo</li>
+                                <li class="texto_tbl">Auto completado</li>
+                                <li class="texto_tbl">Textos: Ampliación y contrastes</li>
+                                <li class="texto_tbl">Ubicación del usuario en la web</li>
+                                <li class="texto_tbl">Titulos y enlaces descriptivos</li>
+                                <li class="texto_tbl">Diversos accesos a las páginas</li>
+                                <li class="texto_tbl">Cambiar idiomas de textos</li>
+                                <li class="texto_tbl">Mecanismos de navegación</li>
+                                <li class="texto_tbl">Errores y sugerencias</li>
+                                <li class="texto_tbl">Compromisos legales o transiciones financieras</li>
+                                <li class="texto_tbl">Presentacion de mensajes de estado</li>
+                                <li class="texto_tbl">Información sobre idiomas</li>
+                            </ul>
+                        </div>
+                        <div class="rojo mt-5">
+                            <h3 class="titulo_crt">Nivel AAA</h3>
+                            <ul class="lista_tbl_crt">
+                                <li class="texto_tbl">Lenguaje de señas</li>
+                                <li class="texto_tbl">Descripción y alternativas audio y multimedia</li>
+                                <li class="texto_tbl">Semántica etiquetas HTML</li>
+                                <li class="texto_tbl">Mayor contraste</li>
+                                <li class="texto_tbl">Eliminar ruido en audio</li>
+                                <li class="texto_tbl">Sin imagenes de textos</li>
+                                <li class="texto_tbl">Interfaz de teclado</li>
+                                <li class="texto_tbl">Sesión de usuario</li>
+                                <li class="texto_tbl">Parpadeo del contenido</li>
+                                <li class="texto_tbl">Desactivar animaciones</li>
+                                <li class="texto_tbl">Organizacion de titulos y enlaces</li>
+                                <li class="texto_tbl">Definiciones para palabras inusuales, jergas y modismos</li>
+                                <li class="texto_tbl">Significado de abreviaturas</li>
+                                <li class="texto_tbl">Pronunciación</li> 
+                                <li class="texto_tbl">Ayuda y prevención de errores</li>
+                                <li class="texto_tbl">Animación por interacciones</li>
+                                <li class="texto_tbl">Mecanismos de entrada concurrentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    
+    
+    </div>
+    <script src="https://kit.fontawesome.com/49d97e010e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

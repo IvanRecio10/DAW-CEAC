@@ -1,0 +1,6 @@
+/* Agrega estilos específicos para el nombre del Pokémon si es necesario */
+.pokemon-name {
+    font-weight: bold;
+    text-transform: capitalize; /* Esto asegura que la primera letra esté en mayúsculas */
+    margin-bottom: 10px; /* Espacio entre el nombre y la imagen */
+}

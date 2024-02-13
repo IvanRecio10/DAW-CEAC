@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Prat</title>
+</head>
+<body>
+
+    <div class="tiempos">
+
+    </div>
+
+
+    <script>
+
+        function hola(){
+
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=53.24&longitude=-6.48&past_days=10&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m")
+            .then(response => response.json())
+            .then(data => {
+                debugger
+                var fechaActual = new Date(Date.now())
+                console.log(fechaActual)
+                for (var datosTiempo of data.hourly.time){
+                   document.querySelector(".tiempos").innerHTML += "<p>"+datosTiempo+"</p>" 
+                }
+                var tempActual = data.hourly.temperature_2m
+                
+            }).catch(error => console.error(error))     
+
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function obtenerPokemonInfo(nombre){
+            fetch(`https://pokeapi.co/api/v2/pokemon/${nombre}`)
+                .then(reponse => response.json())
+                .then(data => {
+                    console.log('Nombre del Pokemon: '+ data.name)
+                    console.log('Tipo(s) del Pokemon: '+ data.types.map(tipo => tipo.type.name).join(", "))
+                })
+                .catch(error => console.error("Error: "+ error))
+        }
+
+        function obtenerPrimeros10Pokemon() {
+            fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+                .then(response => response.json())
+                .then(data => {
+                const pokemonNames = data.results.map(pokemon => pokemon.name);
+                console.log(`Nombres de los primeros 10 Pokémon: ${pokemonNames.join(', ')}`);
+                })
+                .catch(error => console.error(`Error: ${error}`));
+        }
+
+        function obtenerPokemonPorTipo(tipo){
+            fetch(`https://pokeapi.co/api/v2/type/${tipo}`)
+                .then(response => response.json())
+                .then(data => {
+                console.log(data)
+                const pokemonNames = data.pokemon.map(pokemon => pokemon.pokemon.name);
+                console.log(`Nombres de Pokémon de tipo ${tipo}: ${pokemonNames.join(', ')}`);
+                })
+                .catch(error => console.error(`Error: ${error}`));   
+        }
+
+        function mostrarMovimientosPokemon(nombre) {
+            fetch(url)
+                .then(response => respones.json())
+                .then(data => {
+                    
+                })
+            
+        }
+    </script>
+</body>
+</html>

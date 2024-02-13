@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>009</title>
+</head>
+<body>
+
+    <h1>Costes del Viaje</h1>
+    <label>Dias</label>
+    <input type="number" name="dias" min="0" required id="dias"><br>
+    <label>Coste Diario</label>
+    <input type="number" name="costeDiario" min="0" required step="0.01" id="costeDiario"><br>
+    <label>Gastos del vuelo (Opcional)</label>
+    <input type="number" name="vuelo" min="0" step="0.01" id="vuelo" value="0"><br>
+    <label>Otros Gastos (Opcional)</label>
+    <input type="number" name="otrosGastos" min="0" step="0.01" id="otrosGastos" value="0"><br>
+
+    <button id="boton">Enviar</button>
+
+    <div id="resultado">
+
+    </div>
+
+    <script type="text/javascript">
+        /*
+        Objetivo: El objetivo de esta práctica es crear una calculadora de gastos de viaje que permita a los usuarios ingresar
+        los detalles de su viaje y calcular el total de gastos estimados.
+
+        Requisitos:
+
+            -El programa debe permitir al usuario ingresar los siguientes detalles del viaje:
+                -Cantidad de días del viaje.
+                -Costo diario estimado (alojamiento, comida, transporte, entretenimiento, etc.).
+                -Costo de vuelo (opcional).
+                -Costo de otros gastos (opcional).
+
+            -El programa debe calcular y mostrar el gasto total estimado del viaje en función de la información proporcionada por el usuario.
+
+            -El programa debe mostrar los detalles ingresados por el usuario junto con el gasto total estimado.
+
+            -El programa debe validar la entrada del usuario para asegurarse de que se ingresen números válidos y de que los campos obligatorios no se dejen en blanco.
+
+            -El programa debe tener una interfaz de usuario agradable y fácil de usar.
+            
+            -Los datos no deben ser enviados al servidor, por lo que todas las comprobaciobes deberán ser en cliente.
+        */
+
+        var boton = document.getElementById("boton");
+    
+        boton.addEventListener("click", function (){
+            var dias = document.getElementById("dias");
+            var costeDiario = document.getElementById("costeDiario");
+            var vuelo = document.getElementById("vuelo");
+            var otrosGastos = document.getElementById("otrosGastos");
+
+            var saldoTotal = (parseInt(costeDiario.value)*parseInt(dias.value)) + parseInt(vuelo.value) + parseInt(otrosGastos.value);
+
+            var etiquetaResultado = document.getElementById("resultado");
+            etiquetaResultado.innerHTML += "<p>" + saldoTotal + "</p>"
+        })
+
+
+
+    </script> 
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+            Objetivo: El objetivo de esta práctica es crear un programa de gestión de tareas para ayudar a un valiente aventurero a organizar y 
+            seguir el progreso de sus emocionantes misiones en un mundo lleno de peligros y desafíos.
+        
+            Descripción: Nuestro valiente aventurero se embarca en innumerables misiones en su búsqueda de tesoros y la derrota de malvados villanos. 
+            Sin embargo, necesita una forma de llevar un registro de sus tareas pendientes y completadas. En esta práctica, se te pide crear un programa 
+            que le permita al aventurero agregar, eliminar, mostrar y marcar como completadas las tareas relacionadas con sus misiones.
+        
+            Requisitos:
+        
+                -El programa no debe lanzar ninguna excepción. Haz las comprobaciones necesarias de todos los datos.
+        
+                -El programa debe incluir un array llamado tareas que almacenará las tareas del aventurero. Cada tarea será representada por un objeto 
+                que incluirá propiedades como 'id', 'nombre', 'descripcion', 'fecha' y 'completada'.
+        
+                -El programa debe proporcionar una función agregarTarea que permita al aventurero agregar nuevas tareas a su lista. Esta función debe 
+                solicitar al aventurero que ingrese el 'nombre' de la nueva tarea, una breve descripción y la fecha límite de la tarea. Luego, debe 
+                crear un objeto de tarea con las propiedades correspondientes y agregarlo al array tareas.
+                
+                -El programa debe proporcionar una función eliminarTarea que permita al aventurero eliminar tareas de su lista. Esta función debe solicitar 
+                al aventurero que ingrese el ID de la tarea que desea eliminar y buscar esa tarea en el array tareas por su ID. Una vez encontrada, debe 
+                eliminarla del array.
+                
+                -El programa debe proporcionar una función mostrarTareas que muestre todas las tareas almacenadas en el array tareas. Esta función debe 
+                mostrar el ID, nombre, descripción, fecha límite y estado de completado de cada tarea.
+                
+                -El programa debe proporcionar una función marcarTareaCompletada que permita al aventurero marcar una tarea como completada. 
+                Esta función debe solicitar al aventurero que ingrese el ID de la tarea que desea marcar y buscar esa tarea en el array tareas por su ID. 
+                Una vez encontrada, debe cambiar el estado de completado de la tarea a true.
+
+                -También tiene que tener una posibilidad de acabar el juego.
+        
+            Con estos requisitos, nuestro aventurero estará preparado para enfrentar los desafíos y mantenerse organizado en su búsqueda de la gloria y los 
+            tesoros ocultos en este vasto mundo de aventuras.
+        
+        */
+
+        // La lista de tareas.
+        var listaTareas = [];
+        var seguir = true;
+
+        function agregarTarea(){
+            var tarea = {};
+            tarea.id = Math.random().toString(36).replace("0.", "")
+            tarea.nombre = prompt("Introduce el nombre de la tarea: ")
+            tarea.descripcion = prompt("Introduce la descripción de la tarea: ")
+            tarea.fecha = prompt("Introduce la fecha de la tarea: ")
+            tarea.completada = false;
+
+            listaTareas.push(tarea);
+        }
+
+        function mostrarTareas(){   
+            var tareas = ""
+            for (tarea of listaTareas){
+                tareas += "Tarea : \n" + "ID: " + tarea.id + "\n" + "Nombre: " + tarea.nombre + "\n" + "Descripción: " + tarea.descripcion + "\n" + "Fecha: " + tarea.fecha + "\n" + "Completado: " + tarea.completada + "\n \n" ;
+            }
+            alert(tareas);
+        }
+
+        function eliminarTarea(){
+            var id = prompt("Introduce el ID: ")
+            listaTareas = listaTareas.filter((tarea) => tarea.id != id)
+        }
+
+        function marcarTareaCompletada(){
+            var id = prompt("Introduce el ID: ")
+            for (tarea of listaTareas){
+                if (tarea.id == id){
+                    tarea.completada = true;
+                }else{
+                    alert("Ese ID no es correcto")
+                }
+            }
+        }
+
+        do {
+            var opcion = prompt("Elige que quieres hacer: \n 1 -Mostar tareas. \n 2-Agregar tarea. \n 3-Eliminar tarea. \n 4- Marcar tarea como completada. \n 5- Salir")
+
+            switch (opcion) {
+                case '1':
+                    mostrarTareas();
+                    break;
+                case '2':
+                    agregarTarea();
+                    break;
+                case '3':
+                    eliminarTarea();
+                    break;
+                case '4':
+                    marcarTareaCompletada();
+                    break;
+                case '5':
+                    window.close()
+                    break;
+                default:
+                    alert("No has elegido ninguna opción")
+                    break;
+            }
+
+        } while (seguir == true);
+
+    </script>
+</body>
+</html>
+
+
+
+

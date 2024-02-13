@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>006</title>
+</head>
+<body onload="generarNumero()">
+    <table>
+        <thead>
+            <th>Input</th>
+            <th>Valor Aleatorio</th>
+            <th>Resultado</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input name="num1" type="number" class="numIntroducido" id="num1" onchange="calcularMultiplicacion(this)"></td>
+                <td class="numAleatorio" id="1"></td>
+                <td class="resultado" id="1resultado"></td>
+            </tr>
+            <tr>
+                <td><input name="num2" type="number" class="numIntroducido" id="num2" onchange="calcularMultiplicacion(this)"></td>
+                <td class="numAleatorio" id="2"></td>
+                <td class="resultado" id="2resultado"></td>
+            </tr>
+            <tr>
+                <td><input name="num3" type="number" class="numIntroducido" id="num3" onchange="calcularMultiplicacion(this)"></td>
+                <td class="numAleatorio" id="3"></td>
+                <td class="resultado" id="3resultado"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <input type="submit" value="Calcular Suma" onclick="calcularSuma()">
+
+    <script type="text/javascript">
+        function generarNumero(){
+            var html = document.querySelectorAll(".numAleatorio")
+            for (etiqueta of html){
+                var numAleatorio = Math.floor(Math.random() * 10)
+                etiqueta.innerText += numAleatorio
+            }
+        }
+
+        function calcularMultiplicacion(html){
+            var numIntroducido = html.id
+            if (numIntroducido == "num1"){
+                var numero = parseInt(html.value)
+                var aleatorio = document.getElementById("1")
+                var numAleatorio = parseInt(aleatorio.innerText)
+                var etiquetaResultado = document.getElementById("1resultado")
+                var resultado = numero*numAleatorio
+                etiquetaResultado.innerText = resultado
+            }else if (numIntroducido == "num2"){
+                var numero = parseInt(html.value)
+                var aleatorio = document.getElementById("2")
+                var numAleatorio = parseInt(aleatorio.innerText)
+                var etiquetaResultado = document.getElementById("2resultado")
+                var resultado = numero*numAleatorio
+                etiquetaResultado.innerText = resultado
+            } else if (numIntroducido == "num3"){
+                var numero = parseInt(html.value)
+                var aleatorio = document.getElementById("3")
+                var numAleatorio = parseInt(aleatorio.innerText)
+                var etiquetaResultado = document.getElementById("3resultado")
+                var resultado = numero*numAleatorio
+                etiquetaResultado.innerText = resultado
+            }   
+        }
+
+        function calcularSuma(){
+            var resultados = document.querySelectorAll(".resultado")
+            var resultado = 0
+            for(etiqueta of resultados){
+                resultado += parseInt(etiqueta.innerText)
+            }
+            alert("La suma total es: " + resultado)
+        }
+
+
+
+    </script>
+</body>
+</html>

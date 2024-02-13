@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ejemplo de Navegación de Nodos HTML</title>
+    <style>
+        #formulario {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        .campo-form {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        .articulo {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        aside {
+            background-color: #eee;
+            padding: 10px;
+        }
+
+        aside h2 {
+            margin: 0;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 10px;
+        }
+
+        #tabla-de-contenidos {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #tabla-de-contenidos h2 {
+            margin: 0;
+        }
+
+        #tabla-de-contenidos table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #tabla-de-contenidos th,
+        #tabla-de-contenidos td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Blog de Programación</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Artículos</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="articulo">
+            <h2>Introducción a JavaScript</h2>
+            <p>JavaScript es un lenguaje de programación...</p>
+            <a href="#">Leer más</a>
+        </section>
+        <section class="articulo">
+            <h2>HTML y CSS para Principiantes</h2>
+            <p>Si eres nuevo en el mundo del desarrollo web...</p>
+            <a href="#">Leer más</a>
+        </section>
+        <section class="articulo">
+            <h2>Frameworks de JavaScript</h2>
+            <p>Los frameworks de JavaScript como Angular, React y Vue.js...</p>
+            <a href="#">Leer más</a>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Enlaces Útiles</h2>
+        <ul>
+            <li><a href="#">Recursos de JavaScript</a></li>
+            <li><a href="#">Tutoriales de Desarrollo Web</a></li>
+            <li><a href="#">Foro de Programadores</a></li>
+        </ul>
+    </aside>
+    <div id="formulario">
+        <h2>Formulario de Contacto</h2>
+        <div class="campo-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+        </div>
+        <div class="campo-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div class="campo-form">
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+        <div class="campo-form">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+        </div>
+        <button type="submit">Enviar</button>
+    </div>
+    <section id="tabla-de-contenidos">
+        <h2>Tabla de Contenidos</h2>
+        <table>
+            <tr>
+                <th>Capítulo</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Fecha</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Introducción a JavaScript</td>
+                <td>Juan Pérez</td>
+                <td>2023-10-28</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>HTML y CSS para Principiantes</td>
+                <td>Maria González</td>
+                <td>2023-10-29</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Frameworks de JavaScript</td>
+                <td>Carlos Rodríguez</td>
+                <td>2023-10-30</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Blog de Programación</p>
+    </footer>
+
+    <script>
+
+        // 1. Navegar desde el encabezado al primer párrafo en el primer artículo.
+        //Quiero el primer párrafo que esté contenido dentro de un .articulo dentro del main.
+
+        var ejercicio1 = document.querySelector("main .articulo p");
+
+        // 2. Navegar desde el segundo artículo al enlace "Leer más".
+
+        var ejercicio2 = document.querySelector("main .articulo").nextElementSibling.querySelector("a")
+
+        // 3. Navegar desde el encabezado al primer elemento de la barra lateral.
+
+        var ejercicio3 = document.querySelector("header").parentElement.querySelector("aside ul").firstElementChild
+
+        // 4. Navegar desde el último enlace de navegación al encabezado.
+
+        var ultimoEnlace = document.querySelector("aside").lastElementChild.lastElementChild
+        var ejercicio4 = ultimoEnlace.parentElement.parentElement.parentElement.querySelector("header")
+        
+		// 5. Navegar desde el formulario hasta el campo input de tipo tel que esté dentro de una clase .campo-form.
+
+        var ejercicio5 = document.querySelector("#formulario").querySelector(".campo-form:nth-child(5)").querySelector("input[type='tel']")
+
+        //6º Navegar hacia el primer artículo desde el encabezado:
+        // Obtener el elemento H1 del encabezado
+        // Navegar al primer artículo
+
+        var h1Encabezado = document.querySelector("header h1")
+        var ejercicio6 = h1Encabezado.parentElement.parentElement.querySelector("main .articulo")
+
+        //7ºNavegar hacia el botón "Enviar" desde el último campo de formulario
+        // Obtener el último campo de formulario
+        // Navegar al botón "Enviar"
+
+        var ejercicio7 = document.querySelector("input[type='tel']").parentElement.nextElementSibling
+
+        //8ºNavegar desde un enlace de artículo al título del artículo
+        // Obtener un enlace dentro del artículo
+        // Navegar al título del artículo desde el enlace
+
+        var ejercicio8 = document.querySelector(".articulo a").parentElement.firstElementChild
+
+        //9ºNavegar desde el botón "Enviar" al encabezado
+        // Obtener el botón "Enviar"
+        // Navegar al encabezado desde el botón
+
+        var ejercicio9 = document.querySelector("button[type='submit']").closest("body").querySelector("header")
+
+        // 10. Navegar desde el primer enlace de navegación al tercer enlace de navegación.
+
+        var ejercicio10_1 = document.querySelectorAll("a")[2]
+        var ejercicio10_2 = document.querySelector("a").parentElement.nextElementSibling.nextElementSibling.querySelector("a")
+        var ejercicio10_3 = document.querySelector("a").closest("ul").querySelector("li:nth-child(3)").querySelector("a")
+
+        // 11. Navegar desde el primer párrafo del segundo artículo al tercer párrafo del mismo artículo.
+
+        var ejercicio11 = document.querySelector(".articulo").nextElementSibling.querySelector("p").closest("main").lastElementChild.querySelector("p")
+
+        // 12. Navegar desde el primer campo de formulario al cuarto campo de formulario.
+
+        var ejercicio12 = document.querySelector("#formulario").firstElementChild.parentElement.querySelector("div:nth-child(4)")
+
+        // 13. Navegar desde el último enlace de la barra lateral al primer enlace de navegación.
+
+        var ejercicio13 = document.querySelector("aside").lastElementChild.lastElementChild.closest("body").querySelector("header").querySelector("a")
+
+        // 14. Navegar desde el último campo de formulario al segundo enlace dentro del tercer artículo.
+
+        var ejercicio14 = document.querySelector("#formulario").lastElementChild.closest("body").querySelector("main").lastElementChild.querySelector("a")
+
+    </script>
+</body>
+
+</html>

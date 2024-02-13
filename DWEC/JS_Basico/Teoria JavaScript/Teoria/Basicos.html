@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script type="text/javascript">
+        //Esto es un comentario de linea.
+        /*
+        Esto es un comentario de varias lineas
+        */
+
+        /*
+        Tipos de datos
+            Textos -> "hola" / "1" / 'hola'
+            Números -> 9.15 / 7 / 3e10
+            Booleanos -> true / false
+            Null -> Variable declarada con valor null(sin valor)
+            Undefined -> Variable definida sin valor
+            Object -> Propiedades y funciones/metodos 
+            Funciones -> Llamar()
+
+            Ejemplo:
+            
+        */
+        var variable1 = 7
+
+        //Para pintar por consola
+        console.log("Hola mundo por consola");
+
+        /*
+            Funcion importante -> typeof (Para saber el tipo de dato de una variable)
+        */
+
+        console.log(typeof(variable1)+ " Y el + para poder concatenar textos");
+        
+        /*
+            Para poner un punto de interrupcion y asi poder debugear el codigo ponemos 
+            la palabra reservada debugger.
+        */
+
+        /*
+            Para convertir tipod de datos:
+                parseInt()
+                parseFloat()
+                Añadir un string o unas comillas dobles o simples 
+                Boolean()
+        */
+
+        console.log(parseInt(1));
+        console.log(parseInt(1.5));
+        console.log(parseInt("1"));
+        console.log(parseInt("1.5"));
+
+        console.log(Boolean(1));
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean("Hola"));
+
+        /*
+            Operadores de comparacion:
+                == -> Compara dos variables y devuelve un True si su valor es igual
+                != -> Compara dos variables y devuelve un True si su valor es distinto
+                === -> Compara dos variables, si su valor y su tipo de dato es igual retorna un True
+                !== -> Compara dos variables, si su valor y su tipo de dato es distinto retorna un True
+                >= 
+                <=
+                <
+                >
+        */
+
+        /*
+            Operadores aritmeticos:
+                +
+                -
+                *
+                /
+                %
+                ++
+                --
+        */
+
+        /*
+            Operadores de asignacion:
+                =
+                +=
+                -=
+                +=
+                /=
+                %=
+        */
+
+        /*
+            Operadores Booleanos:
+                && -> AND
+                || -> OR
+                ! -> NOT
+        */
+
+        /*
+            Operadores de Objetos:
+                new -> Se usa para instanciar una clase
+                . ->  Se usa para acceder a las propiedades de un objeto
+                [] -> Se usa para acceder a las propiedades de un objeto cuando el . no es valido
+                instanceof -> Se usa para comprobar si un objeto es una instancia de un tipo de objeto
+                this -> Se usa para referenciar un elemento del propio objeto
+                in -> Se usa para verificar si una propiedad existe en un objeto
+                delete -> Borro una propiedad de un objeto
+
+        */
+
+        /*
+            Estructuras de control:
+                Comprobar condiciones:
+                    Comprobacion en varias lineas:
+                        if(condicion){
+                            parte de verdad
+                        }else{
+                            parte de mentira
+                        }
+                    Comporbacion en una sola linea
+                        condicion ? parte de verdad : parte falsa
+                        if(condicion) parte de verdad ; else  parte falsa
+            
+            Bucles:
+                While:
+                    while(condicion){
+                        Instrucciones a ejecutar mientras que la condicion sea cierta
+                    }
+                Do While:
+                    do{
+                        Instrucciones a ejecutar mientras que la condicion sea cierta
+                    }while(condicion)   
+             
+        */
+
+        //Declaracion de una lista / array
+        
+        var lst = [1,2,3,4,5,6]
+        for(var i=0; i < lst.length; i++){
+            console.log(lst[i])
+        }
+        
+        console.log("-------");
+        lst.forEach(elemento=>console.log(elemento))
+
+        var obj ={
+            "clave1" : "valor",
+            "clave2" : 1,
+            "clave3" : [1,2,3,4],
+            "clave4" : true
+        }
+
+        console.log(obj)
+        console.log(Object.keys(obj))
+        Object.keys(obj).forEach(clave => console.log("clave = " + clave + " -> valor = " + obj[clave]))
+
+        console.log("---------")
+
+        for(var clave in obj){
+            console.log("clave = " + clave + " -> valor = " + obj[clave])    
+        }
+        
+        console.log("---------")
+
+        //Un bucle for con la palabra of sirve para recorrer los elementos de un iterable
+
+        for(var num of lst){
+            console.log(num)
+        }
+
+        function decirHola(){
+            return "Hola"
+        }
+
+        var funcionGuardada = decirHola()
+
+        console.log(funcionGuardada)
+        console.log(decirHola())
+
+        var array = new Array(1,2,3,4,5,6,"hola")
+        console.log(array)
+
+        /*
+            Funciones de un array:
+                .lengh -> Devuelve la cantidad de elementos de un array
+                .toString() -> Devuelve los elementos de un array en un String separado por comas
+                .join('separador') -> Devuelve los elementos de un array separados por un separador
+                .pop() -> Elimina el ultimo elemento de un array
+                .push() -> Sirve para introducir nuevos elementos a un array
+                .indexOf() -> Te devuelve el indice de la promera coincidencia, si no la encuentra te devuelve un -1
+                .includes() -> Para saber si un elemento se encuentra en el array
+                .every() -> Para saber si todos los elementos de un array cumplen una condición
+                .some() -> Sirve para comprobar si alguno de los elementos cumple alguna condición
+                .find() -> Sirve para devolver el primer elemento que cumple una condición
+
+        */
+
+        /*
+
+            Para capturara las excepciones:
+                Try Catch:
+                    try{
+                        Codigo que puede dar error
+                    }catch(error){
+                        En caso de que el codigo de error se ejecuta en esta parte
+                    }finally{
+                        Este bloque se ejecuta siempre de o no de excepcion
+                    }
+        */
+    
+        var personas = [{"Nombre" : "Iván" , "Edad" : 18}, {"Nombre" : "Diego" , "Edad" : 25}, {"Nombre" : "Sergio" , "Edad" : 30000}]
+        console.log(personas.find(persona => persona.Edad == 18));
+    
+        /*
+            Funciones Call Back:
+                Estas funciones son elementos que se pasan como parametros a otras funciones 
+                y se llaman dentro de esas funciones. Este tipo de funiones es muy comun en la 
+                programación asíncrona.
+
+                La principal característica de una función call back es que es pasada como valor y 
+                puede ser llamada por la función receptora en el momento adecuado. Pueden ser funciones 
+                anonimas o definidas previamente.
+        */
+
+        lst.forEach(function(elemento){
+            console.log(elemento)
+        }) 
+    
+        /*
+            Funcion setInterval(callback, milisegundos)-> Ejecuta una funcion cada x milisegundos.
+            La funcion setInterval devuelve un ID asociado al intervalo
+
+            Funcion setTimeOut(callback, milisegundos) -> Ejecuta una funcion 1 sola vez despues de x
+            milisegundos. La funcion setTimeOut devuelve un ID asociado.
+
+            Funcion clearInterval(idIntervalo) -> Sirve para arar la funcion de un intervalo
+        */
+
+        alert("HOLA")
+
+        function mayorDeEdad(){
+            console.log("Soy mayor de edad")
+        }
+        function menorDeEdad(){
+            console.log("Soy menor de edad")
+        }
+        
+
+        if(confirm("¿Eres mayor de edad?")){
+            mayorDeEdad()
+        }else{
+            menorDeEdad()
+        }
+
+        //Clases en JavaScript
+
+        class CarritoDeLaCompra{
+            constructor(id, nombre, cantidad, precio){
+                this.id = id;
+                this.nombre = nombre;
+                this.cantidad = cantidad;
+                this.precio = precio;
+            }
+            
+            static contarInventario(lista){
+                var itemsUnicos = new Set();
+                for(var item of lista){
+                    itemsUnicos.add(item.nombre);
+                }
+                return itemsUnicos.size
+            }
+
+            static ordenLista(lista){
+                lista.sort(function(a, b){
+                    return b.precio - a.precio;
+                });
+                return lista
+            }
+
+            static sumaDinero(lista){
+                var dineroTotal = 0;
+                for (var item of lista){
+                    dineroTotal += (item.precio*item.cantidad); 
+                }
+                return dineroTotal;
+
+            }
+
+        }
+
+        CarritoDeLaCompra.prototype.info = function(){
+            return this.id +"/" + this.nombre + "/" + this.cantidad + "/" + this.precio;
+        }
+
+        /*
+            Clase Date:
+                var fecha = new Date() -> Para declarar una nueva fecha en ese momento que la declares.
+                - Funciones get:
+                    getDate() -> Coge los dias de la fecha (fecha.getDate())
+                    getHours() -> Coge las horas de la fecha que tenemos.
+                    getMonth() - Coge los meses de la fecha que tenemos. Esta funcion va del 0-11 es decir Enero es el 0 y Diciembre el 11.
+                    getFullYear() -> Coge los 4 digitos de los años.
+                    getYear() -> Solo coge los 2 ultimos digitos.
+                    getDay() -> Coge el numero de la semana en la que estamos. Va de 0-6 y empieza desde el Domingo que es (0) hasta el Sabado que es (6) 
+                    getMinutes() -> Coge los minutos.
+                    getSeconds() -> Coge los segundos.
+                new Date(2004,9,11,23,40,00) -> Para establecer la fecha que nosotros queramos (Tue Oct 11 2004 23:40:00)
+                        (year,m,d,H,M,S)
+            Para sumar fechas:
+        */
+        
+        var fechaMia = new Date(2004,9,11,23,40,20)
+        var fecha = new Date(Date.now())
+        Date.prototype.suma = function(fecha){
+            var año = fecha.getFullYear()
+            var mes = fecha.getMonth()
+            var dia = fecha.getDate()
+            var horas = fecha.getHours()
+            var min = fecha.getMinutes()
+            var sec = fecha.getSeconds()
+
+            nuevaFecha = this.setFullYear(año + this.getFullYear())
+            console.log(nuevaFecha)
+        }
+
+        //Document
+
+            /*
+                document.querySelector("input.(nombreClase/nombreID)") -> Te devuele la primera etiqueta que encuentra que tenga el ID o Class que le pasemos
+                document.querySelectorAll("input.(nombreClase/nombreID)") -> Lo mismo pero te devuelve todos los que tengan ese ID o Class
+                                         ("input[type='number']")
+                                         ("input[type='radio']:checked") -- ("input[type='radio']:not(:checked)") -> Para saber si el input esta seleccionado o no
+                document.getElementByID("ID") -> Te devuelve las etiquetas HTML que tengan ese ID
+                document.getElementByClassName("class")
+                innerHTML -> Sirve para añadir cosas a nuestro HTML.
+
+            */
+
+            /*
+                Eventos:
+
+                    Sirve para añadir eventos a etiquetas HTML
+
+                    elemento.addEventListener("click", function(e){
+                        console.log(e)
+                        e.stopInmediatePropagation()
+                        e.preventDefault()
+                    })
+            */
+
+
+            //nextElementSibling
+            //paretnElement
+            //childNodes
+                    
+            
+    </script>
+</body>
+</html>

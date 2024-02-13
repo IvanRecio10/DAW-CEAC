@@ -1,0 +1,140 @@
+.formulario{
+    background-color: rgb(246, 146, 106);
+    margin: auto;
+    margin-top: 10%;
+    width: 20%;
+    padding: 3em;
+    text-align: center;
+    border-radius: 5em;
+    box-shadow: 0px 0px 50px rgb(131, 131, 131);
+}
+input, textarea{
+    padding: .5em;
+    border: none;
+    border-bottom: 1px solid;
+    background-color: rgb(249, 168, 136);
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+textarea{
+    resize: none;
+}
+label{
+    display: block;
+    font-size: 1.2em;
+    padding: .5em;
+}
+.boton{
+    border: .2em solid;
+    width: 40%;
+    margin-top: 1.4em;
+    padding: .7em;
+    border-radius: 10em;
+    background-color: rgb(249, 168, 136);
+    text-decoration: none;
+    color: black;
+    padding-bottom: .5em;
+}
+.boton:hover{
+    transition: .4s;
+    color: rgb(249, 168, 136);
+    background-color: black;
+}
+section{
+    margin-top: .5em;
+    margin: auto;
+    width: 68%;
+}
+a{
+    text-decoration: none;
+    padding: .5em;
+    color: black;
+}
+.par{
+    background-color: #BDC3C7;
+}
+.par:hover, .impar:hover{
+    transition: .5s;
+    background-color: #AED6F1;
+}
+.impar{
+    background-color: #E5E7E9;
+}
+.tabla{
+    width: 82%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: .4em;
+}
+.imagen_usuario{
+    width: 4%;
+    border-radius: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1.5em;
+    margin-right: 1em; 
+}
+h1{
+    font-size: 200%;
+    text-align: center;
+}
+.iconos{
+    display: inline-block;
+    vertical-align: middle;
+}
+i{
+    margin: .2em;
+}
+.añadirFicha{
+    width: 84%;
+    text-align: right;
+    margin-bottom: 1em;
+}
+.boton_añadir{
+    background-color: #E5E7E9;
+    border: none;
+    border-radius: 10px;
+}
+.añadir{
+    margin-left: .4em;
+}
+.papelera{
+    cursor: pointer;
+}
+.borrado{
+    padding: .4em;
+    margin-bottom: .3em !important;
+    display: block;
+    margin: auto;
+    max-width: 67.3%;
+    width: 67.3%;
+    background-color:rgb(80, 179, 80);
+}
+.tarjetaAlumno{ 
+    margin-top: 10em;
+    background-color: #AED6F1;
+    margin: auto; 
+    width: 25%;
+    padding-bottom: 1em;
+    text-align: center;
+    border-radius: 3em;
+    box-shadow: 0px 0px 50px rgb(131, 131, 131);
+}
+.imagen_mostrada{
+    padding: .5em;
+    width: 65%;
+    border-radius: 50%;
+}
+.abajo{
+    padding-bottom: .5em;
+}
+.boton_volver{
+    margin-top: .3em;
+    padding: .5em;
+    border-radius: 10em;
+    background-color: #85C1E9;
+    text-decoration: none;
+    color: black;
+    padding-bottom: .5em;
+}

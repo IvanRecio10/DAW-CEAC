@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+
+        .nose{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nose" id="contenedor"></div>
+
+
+    <script>
+        function f1(){
+
+            /*
+                Las promesas funcionan con funciones flecha ()=>{}
+            */
+            return new Promise((resolve, rejected)=>{
+                //Para que nos de un resultado valido cuando pongamos un timeOut tenemos que llamar a la funcion seguido un .then()
+                setTimeout(()=>{
+                    resolve(15)
+                }, 2000)
+            })
+        }
+
+        f1()
+        .then((x)=>console.log(x))
+        .catch((x)=>console.error("ha ocrrido un error" + x))
+
+        //Para que nos devuelva el valor cuando llamemos a esta funcion tenemos que poner await antes de llamar a la funcion
+        async function f2(){
+            setTimeout(()=>{
+                return 5
+            }, 2000)
+        }
+
+        //await f2()
+
+        function f4(){
+            var p1 = Promise.resolve(1)
+            var p2 = Promise.resolve(2)
+            var p3 = Promise.resolve(3)
+            var p4 = Promise.resolve(4)
+            Promise.all([p1,p2,p3,p4])
+            .then((datas)=>{
+                for (var i of datas){
+                    console.log(i)
+                }
+            })
+        }
+
+        function f5(){
+            var p1 = Promise.resolve(1)
+            var p2 = Promise.resolve(2)
+            var p3 = Promise.reject(3)
+            var p4 = Promise.resolve(4)
+            Promise.allSettled([p1,p2,p3,p4])
+            .then((datas)=>{
+                for (var i of datas){
+                    if(i.status == 'fulfilled'){
+                        console.log("Todo OK " + i.value)
+                    }else{
+                        console.error("Todo Mal " + i.reason)
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+</html>

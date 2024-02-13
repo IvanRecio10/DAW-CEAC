@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <button id="boton">Cambia el fondo</button>
+
+    <input type="text" id="input">
+
+    <script>
+        var boton = document.getElementById('boton')
+        var input = document.getElementById("input")
+
+        boton.addEventListener("click", function(e){
+            body = document.getElementById('body')
+            numColor = Math.floor(Math.random() * 1000).toString(16)
+            body.style = "background-color: #"+numColor+";"
+        })
+
+        input.addEventListener("blur" , function(e){
+            body = document.getElementById('body')
+            var num = this.value
+            body.style = "background-color: #"+num+";"  
+        })
+    </script>
+
+</body>
+</html>

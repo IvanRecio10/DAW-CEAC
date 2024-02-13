@@ -1,0 +1,32 @@
+.pokemon-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;    
+    max-width: 450px; /* O el ancho que prefieras */
+  
+}
+.flexColum{
+    flex-direction: column;
+}
+.flex{
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+}
+
+.pokemon-card > div:first-child {
+    margin-right: 20px; /* Espacio entre la imagen y las estadísticas */
+}
+
+.pokemon-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-item {
+    margin: 5px 0;
+}

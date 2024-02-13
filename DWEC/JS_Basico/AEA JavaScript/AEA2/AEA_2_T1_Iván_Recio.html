@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Recio</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        /*
+
+            Aqui en primera instacia crearemos las funciones necesarias para el programa que seran:
+                - Agregar gasto o Ingreso()
+                - Mostrar Gasto o Ingreso()
+                - Calcular Saldo()
+        
+        */
+
+        function agregarGastoOIngreso(tipo){
+            //El tipo es para saber si es un gasto o un ingreso que sera un parametro booleano que es false si es un gasto o true si en un ingreso.
+            var transaccion = {};
+            transaccion.concepto = prompt("Escriba un concepto: ");
+
+            if(tipo == true){
+                transaccion.dinero = parseFloat(prompt("Cuanto dinero quiere ingresar:"));
+                listaIngreso.push(transaccion);
+            }else{
+                transaccion.dinero = parseFloat(prompt("Cuanto dinero quiere gastar:"));
+                listaGasto.push(transaccion)
+            }
+        }
+
+        function mostrarGastoOIngreso(lista, tipo){
+            var cadena = "";
+            if(tipo == true){
+                var concepto = "Ingreso";
+            }else{
+                var concepto = "Gasto";
+            }
+            for(transaccion of lista){
+                cadena += concepto + "\n Descripción: " + transaccion.concepto + "\n Dinero: " + transaccion.dinero + "\n";
+            }
+
+            alert(cadena);
+
+        }
+
+        function calcularSaldo(listaIngreso, listaGasto){
+            var dineroGastos = 0;
+            var dineroIngresos = 0;
+            var saldo = 0;
+            for(transaccion of listaGasto){
+                dineroGastos += transaccion.dinero;
+            }
+
+            for(transaccion of listaIngreso){
+                dineroIngresos += transaccion.dinero;
+            }
+
+            saldo = dineroIngresos - dineroGastos;
+            alert(saldo)
+
+        }
+
+        //Creamos las variables que vayamos a necesitar que esten vacias al empezar el codigo
+        var listaIngreso = [];
+        var listaGasto = [];
+        var fallos = 0;
+        var seguir = true;
+
+        do{
+            
+            var opcion = prompt("Elige que hacer: \n 1. Agregar Gasto. \n 2. Agregar Ingreso. \n 3. Mostrar Gasto. \n 4. Mostrar Ingreso \n 5. Calcular Saldo. \n 6. Salir");
+            //Pasamos el string de opcion a minusculas todo.
+            opcion = opcion.toLowerCase();
+
+            switch (opcion) {
+                case 'agregar gasto':
+                    agregarGastoOIngreso(false);
+                    break;
+                case 'agregar ingreso':
+                    agregarGastoOIngreso(true);
+                    break;
+                case 'mostrar gasto':
+                    mostrarGastoOIngreso(listaGasto, false);
+                    break;
+                case 'mostrar ingreso':
+                    mostrarGastoOIngreso(listaIngreso, true);
+                    break;
+                case 'calcular saldo':
+                    calcularSaldo(listaIngreso, listaGasto);
+                    break;
+                case 'salir':
+                    seguir = false;
+                    break;
+                default:
+                    fallos++;
+            }
+
+            if(fallos == 3 || seguir == false){
+                alert("Hasta luego");
+            }
+
+        }while(fallos != 3 && seguir==true)
+
+    </script>
+</body>
+</html>

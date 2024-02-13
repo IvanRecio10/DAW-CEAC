@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <button id="boton1">Haz click en el boton</button>
+    <div id="div" style="width: 200px; border: 1px solid black;">
+        <button id="boton2">Haz click en el boton 2</button>
+    </div> 
+
+    <script>
+        html1 = document.getElementById("boton1")
+        html1.addEventListener("click", function(e){
+            console.log("boton1")
+        })
+        html2 = document.getElementById("div")
+        html2.addEventListener("click", function(e){
+            console.log("div")
+        })
+        html3 = document.getElementById("boton2")
+        html3.addEventListener("click", function(e){
+            console.log("boton2")
+            e.stopImmediatePropagation()
+        })
+
+    </script>
+</body>
+</html>

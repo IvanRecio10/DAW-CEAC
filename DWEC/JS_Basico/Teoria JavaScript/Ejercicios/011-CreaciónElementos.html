@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>011</title>
+</head>
+<body>
+<!--
+    En este ejercicio, se te pide crear una página web interactiva que permita al usuario agregar dinámicamente una cantidad específica de elementos 
+    <input> a un <div>. Además, se debe permitir al usuario reiniciar el contenido del <div> en cualquier momento.
+
+    Instrucciones:
+
+    Crea una página HTML con la estructura proporcionada en el código que has dado.
+
+    Implementa la funcionalidad de reiniciar el contenido del <div> cuando se hace clic en el botón "reiniciar div". Debe vaciarse por completo.
+
+    Implementa la funcionalidad de agregar dinámicamente elementos <input> al <div> cuando se hace clic en el botón "Añadir inputs al div".
+    Debes tener en cuenta lo siguiente:
+        Debes obtener el número de inputs a agregar y el texto a añadir del usuario.
+        Crea un bucle que agregue la cantidad especificada de elementos <input> al <div>.
+        Cada elemento <input> debe contener el texto especificado por el usuario.
+        Cada nuevo elemento <input> debe tener un borde rojo cuando se coloca el cursor sobre él (evento onmouseenter)
+            y el borde rojo debe eliminarse después de 5 segundos (evento onmouseleave).
+        Asegúrate de que la página web tenga un diseño limpio y legible.
+
+    Añade comentarios al código JavaScript para explicar su funcionalidad.
+-->
+    <form>
+        <label>¿Cuantos inputs quieres añadir?</label>
+        <input type="number" name="cantidadInputs">
+        <label>¿Que texto le añadimos?</label>
+        <input type="text" name="texto">
+        <input type="submit" id="1" value="Añadir Inputs">
+        <input type="submit" id="2" value="Reiniciar Div">
+        <div class="inputs"></div>
+    </form>
+
+    <script type="text/javascript">
+        //Primero vamos a coger los valores de los inputs.
+        var cantidadInput = document.querySelector("input[type='number']")
+        var texto = document.querySelector("input[type='text']")
+        //Ahora sacaremos los datos de los botones
+        var btnAñadir = document.querySelector("form")
+        var btnReiniciar = document.getElementById("2")
+
+        //Ahora vamos a poner los eventos a cada uno.
+        btnAñadir.addEventListener('submit' ,function(e){
+
+            e.stopPropagation()
+            e.preventDefault()
+            e.stopImmediatePropagation()
+
+            var div = document.querySelector(".inputs")
+            div.style.display = "block"
+            //Primero vamos a comprobar si la cantidad del inputs es mayor a 0
+            if(parseInt(cantidadInput.value)==0){
+                setTimeout(function(){
+                    div.innerHTML = "<p>Tienes que añadir algun input</p>"
+                    div.style.display = "none"
+                },1500)
+            }else{
+                for(var i = 0; i < parseInt(cantidadInput.value); i++){
+                    div.innerHTML+="<input type='text' name='juego' value='"+ texto.value +"' onmouseenter='pintarRojo(this) onmouseleave=quitarBorde(this)'>"
+                }
+            }
+        })
+
+        function pintarRojo(html){
+            
+        }
+
+    </script>
+</body>
+</html>

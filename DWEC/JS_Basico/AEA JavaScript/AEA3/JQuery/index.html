@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEA 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style type="text/css">
+        div{
+            border: 1px solid black;
+        }
+        p{
+            border: 1px solid black;
+            width: 500px;
+        }
+        table{
+            border: 1px solid black;
+        }
+        th{
+            background-color: rgb(196, 195, 195);
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!--Iván Recio heras-->
+    <main>
+        <!--Primer elemento-->
+        <div>
+            <label>Habilitar Botones</label>
+            <input type="checkbox" name="cambiarBotones" checked>
+        </div>
+        <!--Segundo Elemento-->
+        <div>
+            <input type="text" name="url">
+            <button style="display: block;">Abrir nueva ventana</button>
+        </div>
+        <!--Tercer Elemento-->
+        <div>
+            <p>green</p>
+            <p>red</p>
+            <p>blue</p>
+        </div>
+        <!--Cuarto Elemento-->
+        <div>
+            <button style="display: block;">Añadir Fila</button>
+        </div>
+    </main>
+    <script>
+
+        $()
+
+        $("input[type='checkbox']").on("click", function(e){
+            if($("button").css("display") == "block"){
+                $("button").hide();
+            }else{
+                $("button").show();
+            }
+        })
+
+        $("button").first().on("click", function(e){
+            
+            var url = $(this).prev().val();
+
+            if(url.length == 0){
+                alert('No se ha introducido una URL');
+            }else{
+                window.open(url)
+            }
+        })
+
+        $("p").on("mouseenter", function(e){
+            var color = $(this).text()
+            $("p").css("color", color)
+        })
+
+        $("button").last().on("click", function(e){
+            if($("table").length == 0){
+                var table = $("<table><thead><th>Indice</th><th>Input 1</th><th>Input 2</th><th>Guardar</th><th>Borrar</th></thead><tbody><tr><td>1</td><td><input type='text' name='textoTabla1'></td><td><input type='text' name='textoTabla2'></td><td><button style='display: block;' >Guardar Datos</button></td><td><button style='display: block;' >Borrar Datos</button></td></tr></tbody></table>")
+                $("div").last().append(table)
+            }else{
+                var tamañoTabla = $("tr").length
+                $("tbody").append("<tr><td>"+(tamañoTabla) +"<tr></td><td><input type='text' name='textoTabla1'></td><td><input type='text' name='textoTabla2'></td><td><button style='display: block;' >Guardar Datos</button></td><td><button style='display: block;' >Borrar Datos</button></td></tr>")
+            }            
+        })
+        
+        $("tr td button").first().on("click", function(e){
+            var inputs = $(this).closest(tr).find("tr input[type='text']")
+            for(input of inputs){
+                if(input.value = ""){
+                    alert('Faltan campos por rellenar')
+                    break
+                }
+            }
+            for(input of inputs){
+                alert(input.value);
+            }
+            var tr = $(this).closest(tr)
+            tr.css("backgroud", "green")
+        })
+    </script>
+</body>
+</html>

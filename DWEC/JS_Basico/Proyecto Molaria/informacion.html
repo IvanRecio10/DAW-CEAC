@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molaria</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="media/img/icono.png">
+</head>
+<body>
+
+    <div class="cabecera">
+        <div class="imagen">
+            <img src="media/img/fotoCabecera.jpg" class="fotoCabecera">
+        </div>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <div class="">
+                    <a href="index.html"><img src="media/img/icono.png" class="imagenNav">
+                </div>
+                <div id="menuNav" class="container-fluid collapse navbar-collapse justify-content-center">
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item active"><a href="index.html" class="nav-link m-3">Inicio</a></li>
+                        <li class="nav-item"><a href="cuento.html" class="nav-link m-3">Cuento</a></li>
+                        <li class="nav-item"><a href="informacion.html" class="nav-link m-3">Información</a></li>
+                        <li class="nav-item dropdown ml-auto ">
+                            
+                          <a class="nav-link dropdown-toggle justify-content-end m-3 margen_idioma" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Seleccionar idioma
+                          </a>
+                          <ul class="dropdown-menu margen_movil_option ms-3" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="idioma"><a class="dropdown-item enlace_select" href="#">Castellano</a> <img class="bandera_select" src="media/img/espana.png"></li>
+                            <li class="idioma"><a class="dropdown-item enlace_select" href="#">Inglés</a> <img class="bandera_select" src="media/img/reino-unido.png"></li>
+                            <li class="idioma"><a class="dropdown-item enlace_select" href="#">Catalán</a> <img class="bandera_select" src="media/img/cataluña.png"></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </div>
+               
+                <!--Icono que sale al tener un dispositivo mas pequeño-->
+                <button class="navbar-toggler justify-content-center" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="titulo">
+            <h2>Salud Bucodental</h2>
+        </div>
+
+        <div class="verde textoInfo sombra">
+            <h4>¿Que es la caries?</h4>
+
+            <p>La caries es un problema de salud pública, en paises desarrollados es la enfermedad cronica con más incidencia superando al asma y a la diabetes.<br>En niños de entre 5 a 6 años la incidencia de caries es del 31,25% teniendo más de un diente afectado.</p>
+            <p>En niños de 3 años el porcentaje se acerca al 20% y mucho de esos niños no reciben el tratamiento adecuado a dichas lesiones.</p>
+            <p>Los factores que influyen en la aparicion de estas caries infantiles son: <br> Ausencia de higiene bucal, escasa frecuencia o inicio tardio del cepillado bucal y dietas ricas en azucares.</p>
+            <i class="fa-solid fa-tooth fa-2xl mb-4"></i>
+        </div>
+
+        <div class="azul textoInfo sombra">
+            <h4>Pilares de la prevención</h4>
+            <div class="row prevencionInfo w-75">
+                <img class="col-12 col-sm-5 imagenInfo mb-4" src="media/img/info.png">
+                <ul class="listaInfo col-12 col-sm-5">
+                    <li>Higiene bucal</li>
+                    <li>Uso de productos fluorados</li>
+                    <li>Habitos nutricionales adecuados</li>
+                    <li>Revisiones odontologicas periodicas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="morado textoInfo sombra">
+            <h4>Cepillo de Dientes</h4>
+
+            <p>El tamaño del cepillo dental debe ser adecuado para la edad del niño. El cabezal debe ser redondeado y pequeño<br> de forma que facilite el acceso a todas las zonas de la boca.</p>
+            <p>Los filamentos deben de ser suaves para no dañar las encias y los dientes. El mango debe ser largo y grueso para que <br>el niño lo pueda agarrar con destreza.</p>
+            <p class="pb-3">El cepillo debe renovarse cada 3 meses aproximadamente. Una manera facil de que los niños aprendan este dato y lo recuerden es diciendoles <br>que hay que cambiar el cepillo de dientes cuando cambia la estacion del año.</p>
+        </div>
+
+        <div class="formularioInfo naranja sombra">
+            <h4>¿Tienes alguna duda?</h4>
+            <div class="textoFormulario">
+                <p>Puedes contactar con nosotros a traves de este formulario, solo tienes que enviarnos tu duda o pregunta junto con tu correo electronico donde te responderemos lo antes posible.</p>
+                <p>¡No lo dudes! Contactanos.</p>
+            </div>
+            <div class="formulario">
+                <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                    <label><b>Correo Electrónico</b></label><br>
+                    <input type="mail" name="correo" placeholder="Introduce tu correo" required><br>
+                    <label><b>Mensaje</b></label><br>
+                    <textarea placeholder="Introduce tu mensaje"></textarea><br>
+                    <input type="submit" name="form" value="Enviar">
+                </form> 
+            </div> 
+        </div>
+
+
+        <footer class="justify-content-center">
+            <div class="row container-fluid">
+                <div class="col-12 col-sm-6 nombres">
+                    <p><i class="fa-solid fa-user" style="color: #000000;"></i> María Guijarro e Iván Recio</p>
+                </div>
+                <div class="col-12 col-sm-6 centro">
+                    <p class=""><i class="fa-solid fa-house" style="color: #000000;"></i> CEAC FP</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/49d97e010e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>

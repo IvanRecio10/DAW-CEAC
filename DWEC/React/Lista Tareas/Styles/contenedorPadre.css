@@ -1,0 +1,36 @@
+#mensaje{
+    width: 25%;
+    height: 150px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    resize: none;
+}
+.container{
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, .8);
+    width: 98%;
+}
+h1{
+    padding: 1.5em;
+    text-align: center;
+}
+.añadirTarea{
+    border: none;
+    border-radius: 15px;
+    height: 160px;
+    margin: 2em;
+    background-color: aqua;
+    display: inline-block;
+    vertical-align: middle;
+}
+.botonOrdenar{
+    display: block;
+    padding: 0.6em;
+    border: none;
+    margin-left: 7em;
+    border-radius: 10px;
+    background-color: aqua;
+
+}

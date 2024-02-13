@@ -1,0 +1,65 @@
+*{
+    font-family: 'Calibri';
+    margin: 0;
+    padding: 0;
+}
+.boton{
+    background-color: rgb(221, 135, 93);
+    border-radius: 10px;
+    color: black;
+    display: block;
+    margin: auto;
+    margin-bottom: .5em;
+    text-decoration: none;
+    width: 20%;
+}
+.botonCambio{
+    background-color: rgb(221, 135, 93);
+    border-radius: 10px;
+    color: black;
+    margin: auto;
+    margin-bottom: .5em;
+    padding: .5em;
+    text-decoration: none;
+}
+.botones{
+    margin: auto;
+    margin-top: 1.5em;
+    margin-bottom: -4em;
+    text-align: end;
+    width: 80%;
+}
+.contenido{
+    margin: auto;
+    margin-top: 3em;
+    width: 100%;
+}
+h1{
+    background-color: rgb(221, 135, 93);
+    border-radius: 2em;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    margin: auto;
+    margin-top: 1em;
+    padding: .3em;
+    text-align: center;
+    width: 20%;
+}
+h4{
+    padding: .2em;
+}
+.imagenPelicula{
+    bottom: 0;
+    margin-bottom: .5em;
+    margin-top: .5em;
+}
+small{
+    display: block;
+    margin-top: -1.3em;
+}
+.pelicula{
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    margin: 2em;
+    text-align: center;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+    <div>
+        <p class="resultado"></p>
+    </div>
+
+    <div class="botones">
+        <button class="boton" data-id="1">1</button>
+        <button class="boton" data-id="2">2</button>
+        <button class="boton" data-id="3">3</button>
+        <button class="boton" data-id="4">4</button>
+        <button class="boton" data-id="5">5</button>
+        <button class="boton" data-id="6">6</button>
+        <button class="boton" data-id="7">7</button>
+        <button class="boton" data-id="8">8</button>
+        <button class="boton" data-id="9">9</button>
+        <button class="boton" data-id="0">0</button>
+        <button class="boton" data-id="+">+</button>
+        <button class="boton" data-id="-">-</button>
+        <button class="boton" data-id="*">*</button>
+        <button class="boton" data-id="/">/</button>
+    </div>
+
+    <button class="calcular">Resultado Operacion</button>
+    <button class="calculoTotal">Resultado Total</button>
+    <button class="borrar">Borrar</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        var array = []
+
+        $(".boton").on("click", function (e) {
+            e.preventDefault()
+            var btnSelect = $(this).attr("data-id"); 
+            if ($(".resultado").text() == "") {
+                if (btnSelect == "*" || btnSelect == "/" || btnSelect == "+" || btnSelect == "-") {
+                    return
+                } else {
+                    $(".resultado").text(btnSelect);
+                }
+            } else {
+                $(".resultado").text($(".resultado").text() + btnSelect);
+                
+            }
+        })
+
+        $(".borrar").on("click", function(e){
+            $(".resultado").text("")
+        })
+
+        $(".calcular").on("click", function(e){
+            $(".resultado").text(eval($(".resultado").text()));
+            array.push($(".resultado").text())
+            window.localStorage.setItem("resultado", JSON.stringify(array));
+        }) 
+    </script>
+</body>
+</html>

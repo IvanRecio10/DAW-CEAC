@@ -1,0 +1,25 @@
+.select-language {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+    padding: 8px 12px;
+    border: 1px solid #ccc; /* Color del borde */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(219, 211, 211, 0.1); /* Sombra suave para profundidad */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #333; /* Color del texto */
+    cursor: pointer;
+    margin: 25px;
+    
+}
+
+.select-language:focus {
+    border-color: #17a772; /* Cambia el color del borde al enfocarse */
+    outline: none;
+}
+
+/* Estilos para las opciones del desplegable */
+.select-language option {
+    padding: 10px;
+    background: white;
+    color: #333;
+}

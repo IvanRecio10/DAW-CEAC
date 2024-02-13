@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionamiento iconos</title>
+    <script src="https://kit.fontawesome.com/49d97e010e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <a><i class="fa-solid fa-car-side"></i></a>
+
+    <script>
+
+        /*
+        var iconoCoche = document.querySelector("i");
+
+        iconoCoche.addEventListener("mouseenter", function(e){
+            this.classList.add("fa-bounce");
+        })
+
+        iconoCoche.addEventListener("mouseleave", function(e){
+            this.classList.remove("fa-bounce")
+        })
+        */
+       
+        $("i").on("mouseenter", function(e){
+           $(this).addClass("fa-shake");
+        })
+
+        $("i").on("mouseleave", function(){
+            $(this).removeClass("fa-shake");
+        });
+           
+       
+    </script>
+</body>
+</html>

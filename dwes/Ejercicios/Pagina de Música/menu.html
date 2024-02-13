@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Música</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="icon" href="media/img/icono.png">
+</head>
+<body>
+    <div class="justify-content-center">
+      <div>
+        <img src="media/img/imagenInicio.jpg" class="imagenInicio">
+      </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="mostrar_grupos.php">Grupos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="mostrar_albumes.php">Álbumes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="mostrar_canciones.php">Canciones</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <script>
+      function realizarBusqueda(){
+        debugger
+        var valorTexto = document.getElementById("texto").value
+        var valorGrupo = document.getElementById("grupos").value
+        if(valorTexto == "" || valorGrupo == "0"){
+          window.location = "mostrar_canciones.php?error=1";
+        }else{
+          window.location = "mostrar_canciones.php?buscar&valorTexto="+valorTexto+"&grupo="+valorGrupo
+        }
+      }
+      function enviarGenero(html){
+        var valor = html.value
+        if (valor == 0){
+          window.location = "mostrar_albumes.php"
+        }else{
+          window.location = "mostrar_albumes.php?genero&valor="+valor
+        }
+      }
+
+    </script>
+    <script src="https://kit.fontawesome.com/49d97e010e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

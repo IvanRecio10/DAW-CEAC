@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEA4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/704f66461b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h2>Habilidades</h2>
+
+    <div id="modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">  
+                <div class="iconos"></div> 
+                <div class="contenidoModal"></div>                    
+            </div>
+           
+          </div>
+        </div>
+      </div>
+
+    <select id="habilidades"></select>
+    <button id="buscarHabilidad">Buscar pokemos por habilidad</button>
+
+    <div id="pokemons"></div>
+
+    <script src="funcion.js"></script>
+</body>
+</html>

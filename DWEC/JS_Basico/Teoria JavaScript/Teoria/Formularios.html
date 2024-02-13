@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form>
+        <input id="nombre" type="text" name="nombre" placeholder="Introduce tu nombre">
+        <input id="apellidos" type="text" name="apellidos" placeholder="Introduce tus apellidos">
+        <input id="ciudad" type="text" name="ciudad" placeholder="Introduce tu ciudad">
+        <input id="correo" type="email" name="correo" placeholder="Introduce tu Email">
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="feedback">
+
+    </div>
+
+    <script>
+        var btnEnviar = document.querySelector("form");
+        btnEnviar.addEventListener('submit', function(e){
+
+            e.preventDefault()
+            e.stopPropagation()
+            e.stopImmediatePropagation()
+
+            var nombre = document.getElementById("nombre")
+            var apellidos = document.getElementById("apellidos")
+            var ciudad = document.getElementById("ciudad")
+            var correo = document.getElementById("correo")
+            var feedback = document.getElementById("feedback")
+
+            feedback.style.display = "block"
+
+            var etiquetas = [nombre, apellidos, ciudad, correo];
+
+            for(var input of etiquetas){
+                if(input.value.length == 0){
+                    feedback.innerHTML="<p> El " + input.name + " es obligatorio</p>"
+                    setTimeout(function(){
+                        feedback.style.display = "none"
+                    }, 1500)
+                    return;
+                }
+            }
+
+            for(var i=0; i < correo.value.length; i++){
+                if(correo.value[i] == "@"){
+                    verdadero = true;
+                    break;
+                }
+            } 
+            if(verdadero==false){
+                feedback.innerHTML = "<p>Este input necesita un @</p>"
+            }else{
+                alert("Mandamos los datos")
+            }
+        })
+    </script>
+</body>
+</html>

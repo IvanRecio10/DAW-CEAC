@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos</title>
+</head>
+<body>
+    <!-- Para poder darle funcionalidad a un elemento HTML necesitamos darle un atributo on... -->
+    <div onmouseleave="mostraPulsaciones()" onmouseenter="reiniciarContador()" style="border: solid black 1px;">
+        <button onclick="decirHola('Iván')">Pulsame</button>
+        <button onclick="mostraPulsaciones()">Ver numero de pulsaciones</button>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <input type="text" on onfocus="decirHola()">
+    </div>
+
+    <script type="text/javascript">
+
+        var pulsaciones = 0;
+
+        function decirHola(nombre){
+            console.log("Hola " + nombre)
+            pulsaciones++;
+        }
+        function mostraPulsaciones(){
+            alert(pulsaciones)
+        }
+        function reiniciarContador(){
+            pulsaciones = 0;
+        }
+    </script>
+</body>
+</html>

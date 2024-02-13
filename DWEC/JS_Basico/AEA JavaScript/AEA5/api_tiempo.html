@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEA Parte del tiempo</title>
+</head>
+<body onload="cargarTiempos()">
+    <table>
+        <thead>
+            <tr>
+                <th>Dia</th>
+                <th>Madrid</th>
+                <th>Burgos</th>
+            </tr>
+        </thead>
+        <tbody class="cuerpoTabla">
+
+        </tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function cargarTiempos(){
+        
+            //Primero vamos a usar la url de madrid
+
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=-3.69&longitude=42.34&past_days=10&hourly=temperature").then(response => response.json()).then(data => {
+                var listaDias = []
+                var listaFechas = []
+                for (fecha of data.hourly.time){
+                    var fechaUnica = fecha
+                    var dia = fecha.slice(8,10)
+                    var mes = fecha.slice(5,7)
+                    var año = fecha.slice(0,4)
+                    var diaCompleto = dia + "/" + mes + "/" + año
+                    if (!listaDias.includes(dia)){
+                        listaDias.push(dia)
+                        listaFechas.push(diaCompleto)
+                    }   
+                }
+                var contador = 0;
+                var listaTemperaturas = []
+                var temperaturaDia = []
+                for (temp of data.hourly.temperature){
+                    if(contador != 23){
+                        temperaturaDia.push(temp)
+                        contador++
+                    }else{
+                        listaTemperaturas.push(temperaturaDia)
+                        temperaturaDia = []
+                        contador = 0
+                    }
+                }
+                var listaTempsMaxMad = []
+                var listaTempsMinMad = []
+                var listaTempsMediaMad = []
+                for(lista of listaTemperaturas){
+                    listaTempsMaxMad.push(lista.sort((a,b) =>  b - a)[0])
+                    listaTempsMinMad.push(lista.sort((a,b) =>  a - b)[0])
+                    listaTempsMediaMad.push((lista.reduce((a, b) => a + b)/lista.length).toFixed(2))   
+                }
+                            
+                for (indice in listaFechas){
+                    $(".cuerpoTabla").append("<tr id="+indice+"><td>"+listaFechas[indice]+"</td><td>"+listaTempsMaxMad[indice]+"ºC /"+listaTempsMinMad[indice]+"ºC /"+listaTempsMediaMad[indice]+"ºC</td></tr>")
+                }
+                
+            })
+
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=-3.7&longitude=40.41&past_days=10&hourly=temperature").then(response => response.json()).then(data => {
+                var contador = 0;
+                var listaTemperaturas = []
+                var temperaturaDia = []
+                for (temp of data.hourly.temperature){
+                    if(contador != 23){
+                        temperaturaDia.push(temp)
+                        contador++
+                    }else{
+                        listaTemperaturas.push(temperaturaDia)
+                        temperaturaDia = []
+                        contador = 0
+                    }
+                }
+                var listaTempsMaxBur = []
+                var listaTempsMinBur = []
+                var listaTempsMediaBur = []
+                for(lista of listaTemperaturas){
+                    listaTempsMaxBur.push(lista.sort((a,b) =>  b - a)[0])
+                    listaTempsMinBur.push(lista.sort((a,b) =>  a - b)[0])
+                    listaTempsMediaBur.push((lista.reduce((a, b) => a + b)/lista.length).toFixed(2))   
+                }
+                debugger
+                for (indice in listaTempsMaxBur){
+                    $("#"+indice).append("<td>"+listaTempsMaxBur[indice]+"ºC /"+listaTempsMinBur[indice]+"ºC /"+listaTempsMediaBur[indice]+"ºC</td>")
+                }
+                
+            })
+        
+        }
+
+    </script>
+    
+</body>
+</html>

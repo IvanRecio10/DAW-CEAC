@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Berlin Sans FB";
+    font-size: 1em;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://media.istockphoto.com/id/1273795730/es/foto/fondo-blanco-con-textura-de-m%C3%A1rmol-blanco.jpg?s=612x612&w=0&k=20&c=j1ZKxOTtojWgMaqw-TVJKOE6x_a0rsmIJ3fPUdzikGM=");
+
+}
+footer{
+    background-color: white;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0.3, 0.3);
+    color: black;
+    padding-top: 1.2em;
+}
+main{
+    display: inline-block;
+}
+nav{
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0.3, 0.3);
+}
+.activos{
+    display: none;
+}
+.azul{
+    background-color: #8ACCFF;
+}
+.arr{ 
+    margin: .75em;
+    vertical-align: middle;
+    background: rgb(247, 247, 247);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.arr:hover{
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.155);
+}
+.arr div{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    transform: rotate(45deg);
+    left: 15px;
+    top: 17.5px;
+}
+.rigth{
+    transform: rotate(90deg);
+}
+.left{
+    transform: rotate(-90deg);
+}
+.botonesCuento{
+    background-color: white;
+    width: 170px !important;
+    height: 70px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.bandera_select{
+   display: inline;
+   vertical-align: middle; 
+   margin-right: 1em;
+   width: 1em;
+   height: 1em;
+   margin-top: .5em;
+}
+.borde{
+    border: 1px solid black;
+}
+.bocadillo {
+      position: relative;
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 300px;
+      margin: 20px;
+}
+.bocadillo::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -40px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent;
+}
+.botonesCentrados{
+    margin-left: 28%;
+}
+.button{
+    background-color: white;
+    border: none;
+    border-radius: 1em;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    left: 50%; 
+    padding: 8px 10px; 
+    top: 50%;    
+}
+.button1{
+    transform: translate(-98%, -50%);
+}
+.button2{
+    transform: translate(-89%, -50%);
+}
+.button3{
+    transform: translate(-75%, -50%);
+}
+.centro{
+    display: inline-block;
+    text-align: right;
+    vertical-align: middle;
+}
+.cuento{
+    background-color: white;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+}
+.contenedorPasta{
+    position: relative;
+    display: inline-block;
+    width: 80%;
+}
+.cuerpo{
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.diente{
+    display: inline-block;
+    vertical-align: middle;
+    width: 4%;
+}
+.desplegableIdioma{
+    margin-left: -3em;
+}
+
+.densInicio{
+    display: inline-block;
+    width: 20%;  
+}
+.densCuento{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dialogo{
+    display: inline-block;
+    vertical-align: middle;
+}
+.dialogos{
+    background-color: white;
+    border-radius:2em ;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+.enlace_select{
+    display: inline-block;
+    vertical-align: middle;
+}
+.formulario{
+    text-align: center;
+}
+.formularioInfo{
+    margin: auto;
+    width: 50%;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 2em; 
+    margin-bottom: 3em;
+}
+.fotoCabecera{
+    width: 100%;
+    height: 7.5em;
+}
+input[type="mail"]{
+    width: 30%;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #fad3b7;
+    color: black;
+}
+h4{
+    padding: .6em;
+}
+input[type="submit"]{
+    border: none;
+    background-color: #f9ae79;
+    color: black;
+    width: 20%;
+    height: 20%;
+    border-radius: 6px;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+input[type="submit"]:hover{
+    background-color: black;
+    color: #fad3b7;
+    transition: .5s;
+}
+.imagenInfo{
+    width: 3%;
+    height: 3%;
+}
+.iconoIdioma{
+    margin-top:  .9em;
+}
+.idioma{
+    display: flex;
+}
+.imagenCuento{
+    width: 100%;
+}
+.imagenDensCuento{
+    width: 75%;
+}
+.imagenNav{
+    width: 4em;
+}
+.listaInfo{
+    text-align: left;
+    margin-left: 3em;
+}
+.mainCuento{
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+.molaria{
+    display: inline-block;
+    font-size: 4em;
+    vertical-align: middle;
+}
+.morado{
+    background-color: #D68AFF;
+}
+.nombres{
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+.naranja{
+    background-color: #ffbb8a;
+}
+.prevencionInfo{
+    display: inline-flex !important;
+    place-items: center;
+    justify-content: center;
+}
+.parrafo{
+    border-radius: 1em;
+    padding: 1em;
+}
+.parteImagenCuento{
+    margin-top: 1.7em;
+}
+.pasta{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.pastas{
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+.rojo{
+    background-color: #FF8E8A;
+}
+textarea{
+    width: 30%;
+    height: 50%;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #fad3b7;
+    color: black; 
+}
+.texto{
+    background-color: white;
+    border: none;
+    border-radius: 2em;
+    display: inline-block;
+    padding: 2em;
+    vertical-align: middle;
+}
+.textoInfo{
+    border-radius: 6px;
+    margin: auto;
+    width: 75%;
+    text-align: center;
+    margin-top: 2em;
+}
+.textoFormulario{
+    margin: auto;
+    width: 65%;
+}
+.titulo{
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: center;
+}
+.verde{
+    background-color: #BDFF8A;
+}
+.izqCuento{
+    border-radius: 10px ;
+}
+.izqCuento:hover{
+    transition: .5s;
+    box-shadow: -5px 1px 10px .5px rgba(0, 0, 0, 0.155);
+
+}
+
+
+/*---------------MEDIA QUERYS-----------------*/
+@media (max-width: 767px) {
+    .activos{
+        display: flex;
+    }
+    .navbar-nav {
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+    .iconoIdioma{
+        display: none;
+    }
+    .margen_movil_option{
+        margin-left: 2em !important;
+        border: none !important;
+    }
+    .pastas{
+        margin-top: 2em;
+    }
+    .button{
+        background-color: none !important;
+    }
+    .formularioInfo, .textoInfo{
+        width: 95%;
+    }
+    input[type="mail"]{
+        width: 80%;
+    }
+    textarea{
+        width: 80%;
+        height: 2em;
+    }
+    .cuento{
+        margin-left: auto !important;
+        margin-bottom: 6em;
+    }
+}
+
+@media (max-width: 992px) {
+    .diente{
+        width: 6%;
+    }
+    .pastas{
+        display: flex;
+    }
+    .formularioInfo, .textoInfo{
+        width: 95%;
+    }
+    input[type="mail"]{
+        width: 80%;
+    }
+    textarea{
+        width: 80%;
+        height: 2em;
+    }
+    /*Hay que poner las pastas de dientes en linea*/
+}

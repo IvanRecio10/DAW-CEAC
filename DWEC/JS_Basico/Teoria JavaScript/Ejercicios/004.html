@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .borde{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Crear una tabla con dos columnas y un boton arriba, cuando pulse el boton se añadira una fila-->
+
+    <div>
+        <button onclick="añadirFila()">Añadir Fila</button>
+    </div>
+
+    <table>
+        <thead>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </thead>
+        <tbody id="tabla">
+            <tr class="borde">
+                <td>Hola</td>
+                <td>Adios</td>
+            </tr> 
+        </tbody>
+    </table>
+    
+    <div>
+        <button onclick="seleccionarInput()">Añadir Fila</button>
+    </div>
+
+    <input type="text" class="claseABuscar">
+    <input type="text" class="claseABuscar">
+    <input type="text" class="claseABuscar">
+    <input type="text" class="claseABuscar">
+    <input type="text" class="claseABuscar">
+    <input type="text" class="claseABuscar">
+
+    <script type="text/javascript">
+        function añadirFila(){
+            var tabla = document.getElementById("tabla")
+            tabla.innerHTML+="<tr class='borde'> \n <td>Hola</td> \n <td>Adios</td> \n </tr>"
+        }
+
+        function seleccionarInput(){
+            var inputs = document.getElementsByClassName("claseABuscar")
+        }
+    </script>
+</body>
+</html>

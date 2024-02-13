@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        //Ejercicio 1: Crea una variable nombre y asignale tu nombre como una cadena.
+
+        console.log("Ejercicio 1")
+        var nombre = "Iván";
+        console.log(nombre)
+
+        //Escribe una función llamada saludo que acepte un parámetro nombre y que devuelva la 
+        //cadena "Hola, " seguida del nombre proporcionado.
+        
+        console.log("Ejercicio 2")
+        function decirHola(nombre){
+            console.log("Hola, "+ nombre);
+        }
+
+        decirHola(nombre);
+
+        //Crea un array llamado colores que contenga las cadenas "rojo", "verde" y "azul".
+        
+        console.log("Ejercicio 3")
+        var colores = ["rojo", "verde", "azul"];
+        console.log(colores)
+
+        //Añade "amarillo" al final del array colores utilizando el método push().
+        
+        console.log("Ejercicio 4")
+        colores.push("amarillo");
+        console.log(colores);
+
+        //Escribe un bucle for que recorra cada elemento del array colores y los imprima en la consola. 
+        //Usa todos los tipos de for que hemos visto
+
+        console.log("Ejercicio 5")
+        for(var i = 0; i < colores.length; i++){
+            console.log(colores[i]);
+        }
+        console.log("-------------------")
+        for(var color in colores){
+            console.log(colores[color]);
+        }
+        console.log("-------------------")
+        for(var color of colores){
+            console.log(color);
+        }
+        console.log("-------------------")
+        colores.forEach(color => console.log(color));
+        console.log("-------------------")
+        var contador = 0;
+        while (contador < colores.length){
+            console.log(colores[contador]);
+            contador++;
+        }
+        console.log("-------------------")
+        var contador2 = 0
+        do{
+            console.log(colores[contador2]);
+            contador2++;
+        }while(contador2 < colores.length)
+
+        //Escribe una función llamada multiplica que acepte dos números como parámetros 
+        //y devuelva su producto.
+
+        console.log("Ejercicio 6")
+        function producto(num1, num2){
+            return console.log(num1*num2);
+        }
+
+        producto(3,2);
+
+        //Crea un objeto llamado coche que tenga las propiedades marca, modelo y año, 
+        //y asígnales valores apropiados.
+
+        console.log("Ejercicio 7")
+        var coche = {"Marca" : "Ferrari", "Modelo" : "488 Spider", "Año" : 2023}
+        console.log(coche);
+
+        // Crea un array de objetos, donde cada objeto represente un libro y tenga propiedades 
+        //para titulo, autor y añoDePublicacion.
+
+        console.log("Ejercicio 8")
+        var libreria = [{"Titulo" : "El prisionero del cielo", "Autor": "Carlos Ruiz Zafon", "Año": 2019}, {"Titulo" : "El prisionero del cielo", "Autor": "Carlos Ruiz Zafon", "Año": 2020}, {"Titulo" : "El prisionero del cielo", "Autor": "Carlos Ruiz Zafon", "Año": 2015}]
+        console.log(libreria)
+
+        //Escribe una función que acepte el array de libros y devuelva el libro más reciente 
+        //(el de mayor añoDePublicacion).
+
+        console.log("Ejercicio 9")
+        function libros(libreria){
+            var libroMax = 0
+            libreria.forEach(function(libro){
+                if(libro.Año > libroMax){
+                    libroMax = libro.Año;
+                }
+            })
+            console.log(libroMax);
+        }
+        libros(libreria)
+
+        //Escribe una función llamada suma que acepte un array de números y devuelva su suma.
+
+        console.log("Ejercicio 10")
+        function suma(numeros){
+            var sumaNumeros = numeros.reduce(function (valorAnterior, valorActual){
+                return valorAnterior + valorActual;
+            })
+
+            return console.log(sumaNumeros);
+        }
+
+        suma([1,2,3,4,5,6])
+
+        //Escribe una función invertir que acepte una cadena y devuelva la cadena invertida 
+        //(p.ej., invertir("Hola") debe devolver "aloH").
+
+        console.log("Ejercicio 11");
+        function reversa(palabra){
+            palabraSeparada = palabra.split("");
+            palabraRevertida = palabraSeparada.reverse();
+            palabraArreglada = palabraRevertida.join("");
+            console.log(palabraArreglada)
+        }
+        reversa("Hola")
+
+        //Escribe una función esPalindromo que acepte una cadena y devuelva true si la cadena es un 
+        //palíndromo (se lee igual hacia adelante y hacia atrás) y false en caso contrario.
+
+        console.log("Ejercicio 12")
+
+        function esPalindromo(palabra){
+            palabra = palabra.replaceAll(" ", "");
+            palabraSeparada = palabra.split("");
+            palabraRevertida = palabraSeparada.reverse();
+            palabraArreglada = palabraRevertida.join("");
+            if (palabra == palabraArreglada){
+                return true;
+            }else{
+                return false;           
+            }
+        }
+
+        console.log(esPalindromo("oso"))
+
+        //Escribe una función que acepte dos cadenas y devuelva true si la segunda cadena es una 
+        //subcadena de la primera, y false en caso contrario.
+
+        console.log("Ejercicio 13")
+
+        function cadenas(str1, str2){
+            if (str1.includes(str2)){
+                return true
+            }else{
+                return false
+            }
+        }
+
+        console.log(cadenas("Hola buenos dias", "buenos dias"))
+
+        //Crea una función contadorDeLetras que acepte una cadena y devuelva un objeto que 
+        //represente la cantidad de veces que aparece cada letra en la cadena
+
+        console.log("Ejercicio 14")
+        function diccionario(palabra){
+            letras = palabra.split("")
+            palabraDict = {}
+            for(letra of letras){
+                palabraDict[letra] = 1;
+            }
+            console.log(palabraDict)
+        }
+
+        diccionario("Hola")
+
+        //Escribe un bucle que recorra los números del 1 al 10 e imprima si cada número es par o impar
+
+        console.log("Ejercicio 15")
+        
+        function numerosPareseInpares(){
+            for (var i = 1; i <= 10; i++){
+                if(i%2==0){
+                    console.log("El numero " + i + " es par")
+                }else{
+                    console.log("El numero " + i + " es inpar")
+                }
+            }
+        }
+
+        numerosPareseInpares()
+
+        //Escribe un bucle que busque un número determinado en un array. Si el número está 
+        //en el array, imprime "Número encontrado" y su posición
+
+        console.log("Ejercicio 16")
+
+        function encontrarNum(listaNum, num){
+            for(numero in listaNum){
+                if (num == listaNum[numero]){
+                    console.log("Numero encontrado en la posicion " + numero)
+                }
+            }
+        }
+        
+        encontrarNum([1,2,3,4,5,6,7,10,15,20,33], 7)   
+        
+        //Escribe un bucle que sume todos los múltiplos de 3 o 5 menores que 100
+
+        console.log("Ejercicio 17")
+
+        function multiplos(){
+            listaNum = []
+            for(var i =1; i<=100; i++){
+                if (i%3== 0 || i%5==0){
+                    listaNum.push(i)
+                }
+            }
+            var sumaNumeros = listaNum.reduce(function (valorAnterior, valorActual){
+                return valorAnterior + valorActual;
+            })
+            console.log(sumaNumeros)
+        }
+
+        multiplos()
+
+        //Escribe un bucle que cuente el número de veces que una letra aparece en una 
+        //cadena de texto
+
+        console.log("Ejercicio 18")
+        function contarLetras(frase, letra){
+            contador = 0
+            for(var i = 1; i<= frase.length; i++){
+                if (frase[i]== letra){
+                    contador++
+                }
+            }
+            console.log(contador)
+        }
+
+        contarLetras("Hola buenos dias, ¿Que tal esta todo por aqui?", "a")
+
+        //Crea un array con productos para la compra. Recorre la lista y si encuentras 
+        //el producto "leche", imprime "No olvides comprar leche"
+
+        console.log("Ejercicio 19")
+
+        function listaCompra(lista){
+            for(producto of lista){
+                if (producto == "leche"){
+                    console.log("No olvides comprar la leche")
+                }
+            }
+        }
+
+        listaCompra(["galletas", "pan", "pollo", "leche", "papel", "verdura"])
+
+        //Sin usar el metodo reverse(), escribe un bucle que invierta una cadena de texto
+
+        console.log("Ejercicio 20")
+
+        function invertir(cadena){
+            nuevaCadena = []
+            for (var i = cadena.length; i >= 0; i--){
+                nuevaCadena.push(cadena[i])               
+            }
+            nuevaCadena= nuevaCadena.join("")
+            console.log(nuevaCadena)
+        }
+
+        invertir("Hola")
+
+    </script>
+</body>
+</html>

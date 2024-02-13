@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos</title>
+    <style>
+        .colorDiv{
+            border: 10px solid red;
+        }
+        .altura{
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Para poder darle funcionalidad a un elemento HTML necesitamos darle un atributo on... -->
+    <div onmouseleave="mostraPulsaciones()" onmouseenter="reiniciarContador()">
+        <button onclick="decirHola('Iván')">Pulsame</button>
+        <button onclick="mostraPulsaciones()">Ver numero de pulsaciones</button>
+    </div> 
+
+    <div onclick="agregaClases(this)" onmouseleave="eliminaBorde(this)">
+        <input type="text" onfocus="decirHola()">
+    </div>
+
+    <input type="number" value="5" onchange="inputChange(this)">
+
+    <button onclick="cambiarInput()">
+        Púlsame
+    </button>
+
+    <br>
+
+    <select>
+        <option value="1">Opcion1</option>
+        <option value="2">Opcion2</option>
+        <option value="3">Opcion3</option>
+    </select>
+
+    <input type="text" id="inputABuscar" value="texto sin modificar">
+
+    <script type="text/javascript">
+
+        var pulsaciones = 0;
+
+        function decirHola(nombre){
+            console.log("Hola " + nombre)
+            pulsaciones++;
+        }
+        function mostraPulsaciones(){
+            alert(pulsaciones)
+        }
+        function reiniciarContador(){
+            pulsaciones = 0;
+        }
+        function agregaClases(html){
+            html.className = "colorDiv"
+            html.classList.add("altura")
+            //html.innerText="Hola"
+            html.innerHTML = "<p>Hola buenos dias</p>"
+        }
+        function eliminaBorde(html){
+            html.classList.remove("colorDiv")
+        }
+
+        function cambiarInput(){
+            var input = document.getElementById("inputABuscar")
+            input.value = "Texto modificado"
+        }
+
+        //document.querySelectorAll("select>option:checked")
+    </script>
+</body>
+</html>

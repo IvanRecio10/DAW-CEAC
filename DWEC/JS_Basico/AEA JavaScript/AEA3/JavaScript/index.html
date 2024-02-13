@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEA 3</title>
+    <style type="text/css">
+        div{
+            border: 1px solid black;
+        }
+        p{
+            border: 1px solid black;
+            width: 500px;
+        }
+        table{
+            border: 1px solid black;
+        }
+        th{
+            background-color: rgb(196, 195, 195);
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!--Iván Recio heras-->
+    <main>
+        <!--Primer elemento-->
+        <div>
+            <label>Habilitar Botones</label>
+            <input type="checkbox" name="cambiarBotones" checked onchange="mostrarBotones()">
+        </div>
+
+        <!--Segundo Elemento-->
+        <div>
+            <input type="text" name="url">
+            <button onclick="abrirVentana()" style="display: block;">Abrir nueva ventana</button>
+        </div>
+
+        <!--Tercer Elemento-->
+
+        <div>
+            <p onmouseenter="cambiarColorParrafo(this)">green</p>
+            <p onmouseenter="cambiarColorParrafo(this)">red</p>
+            <p onmouseenter="cambiarColorParrafo(this)">blue</p>
+        </div>
+
+        <!--Cuarto Elemento-->
+
+        <div>
+            <button onclick="añadirFila()" style="display: block;">Añadir Fila</button>
+            
+        </div>
+    </main>
+    <script src="funciones.js"></script>
+</body>
+</html>

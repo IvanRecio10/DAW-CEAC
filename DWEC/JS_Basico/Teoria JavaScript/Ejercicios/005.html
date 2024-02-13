@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Crear 5 inputs tipo text von un valor distinto y cuando pulsemos un boton se pase el texto a mayuscula-->
+
+    <div>
+        <button onclick="pasarMayus(sumarContador)">Mayúsculas</button>
+    </div>
+
+
+    <input type="text" class="input" value="hola buenos dias">
+    <input type="text" class="input" value="hola buenos dias">
+    <input type="text" class="input" value="hola buenos dias">
+    <input type="text" class="input" value="hola buenos dias">
+    <input type="text" class="input" value="hola buenos dias">
+
+    <script type="text/javascript">
+        
+        var contador = 0;
+        
+        function sumarContador(){
+            contador++;
+        }
+        
+        function pasarMayus(suma){
+            suma()
+            var inputs = document.getElementsByClassName("input")
+            for(var input of inputs){
+                if(contador%2 == 0){
+                    input.value = input.value.toUpperCase()
+                }else{
+                    input.value = input.value.toLowerCase()     
+                }
+            }
+        }
+        
+        </script>
+</body>
+</html>

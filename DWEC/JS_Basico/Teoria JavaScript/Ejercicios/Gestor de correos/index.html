@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de correos</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/704f66461b.js" crossorigin="anonymous"></script>
+    <style>
+        .botones{
+            margin-left: 37%;
+            place-items: center;
+        }
+        button{
+            text-align: center;
+            color: white;
+            background-color: dodgerblue;
+            border-radius: 6px;
+            border: none;
+            width: 10em;
+            height: 3em;
+            margin: 1em;
+        }
+        button:hover{
+            background-color: rgb(30, 103, 177);
+        }
+        .cabecera{
+            background-color: dodgerblue;
+            text-align: center;
+            color: white;
+        }
+        table{
+            margin: 0 auto;
+            text-align: center;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .correoElegido{
+            background-color: rgb(237, 237, 237);
+            border-bottom: 1px solid rgb(144, 144, 144);
+        }
+        .cabeceraCorreo{
+            margin: 1em;
+        }
+        .usr, .sobre, .marca, .chincheta, .papelera{
+            margin: .3em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="botones">
+        <button id="añadirEmail">Añadir Email</button>
+        <button id="eliminarEmail">Eliminar Marcados</button>
+        <button id="seleccionarTodo">Seleccionar Todo</button>
+    </div>
+
+    <div class="cabecera"><h2>Prioritarios</h2></div>
+
+    <table>
+        <tbody class="correosRecibidos">
+        </tbody>
+    </table>
+    <script src="gestorDeCorreos.js"></script>
+
+    
+</body>
+</html>
