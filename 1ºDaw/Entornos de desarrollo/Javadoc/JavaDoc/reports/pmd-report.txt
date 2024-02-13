@@ -1,0 +1,42 @@
+src/clases/Cliente.java:7:	CommentSize:	CommentSize: Comment is too large: Too many lines
+src/clases/Cliente.java:17:	ImmutableField:	ImmutableField: Private field 'id' could be made final; it is only initialized in the declaration or constructor.
+src/clases/Cliente.java:18:	CommentRequired:	CommentRequired: Field comments are required
+src/clases/Cliente.java:20:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/clases/Cliente.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'edad' is not assigned and could be declared final
+src/clases/Cliente.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/clases/Cliente.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/clases/Cliente.java:20:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'saldo' is not assigned and could be declared final
+src/clases/Cliente.java:39:	CommentSize:	CommentSize: Comment is too large: Line too long
+src/clases/Cliente.java:43:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'incrementoSaldo' is not assigned and could be declared final
+src/clases/Cliente.java:45:	SimplifyBooleanReturns:	SimplifyBooleanReturns: Avoid unnecessary if..then..else statements when returning booleans
+src/clases/Cliente.java:46:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/clases/Empleado.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/clases/Empleado.java:6:	CommentRequired:	CommentRequired: Field comments are required
+src/clases/Empleado.java:6:	ImmutableField:	ImmutableField: Private field 'id' could be made final; it is only initialized in the declaration or constructor.
+src/clases/Empleado.java:7:	CommentRequired:	CommentRequired: Field comments are required
+src/clases/Empleado.java:7:	ImmutableField:	ImmutableField: Private field 'salario' could be made final; it is only initialized in the declaration or constructor.
+src/clases/Empleado.java:10:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/clases/Empleado.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'edad' is not assigned and could be declared final
+src/clases/Empleado.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/clases/Empleado.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/clases/Empleado.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'salario' is not assigned and could be declared final
+src/clases/Persona.java:4:	CommentRequired:	CommentRequired: Class comments are required
+src/clases/Persona.java:6:	CommentRequired:	CommentRequired: Field comments are required
+src/clases/Persona.java:6:	ImmutableField:	ImmutableField: Private field 'nombre' could be made final; it is only initialized in the declaration or constructor.
+src/clases/Persona.java:7:	CommentRequired:	CommentRequired: Field comments are required
+src/clases/Persona.java:7:	ImmutableField:	ImmutableField: Private field 'edad' could be made final; it is only initialized in the declaration or constructor.
+src/clases/Persona.java:10:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/clases/Persona.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'edad' is not assigned and could be declared final
+src/clases/Persona.java:10:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/test/Test.java:6:	CommentRequired:	CommentRequired: Class comments are required
+src/test/Test.java:6:	ShortClassName:	ShortClassName: Avoid short class names like Test
+src/test/Test.java:6:	TestClassWithoutTestCases:	TestClassWithoutTestCases: The class 'Test' might be a test class, but it contains no test cases.
+src/test/Test.java:6:	UseUtilityClass:	UseUtilityClass: All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/test/Test.java:8:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/test/Test.java:8:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/test/Test.java:9:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'persona' could be declared final
+src/test/Test.java:10:	SystemPrintln:	SystemPrintln: System.out.println is used
+src/test/Test.java:12:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'empleado' could be declared final
+src/test/Test.java:13:	SystemPrintln:	SystemPrintln: System.out.println is used
+src/test/Test.java:15:	LocalVariableCouldBeFinal:	LocalVariableCouldBeFinal: Local variable 'cliente' could be declared final
+src/test/Test.java:16:	SystemPrintln:	SystemPrintln: System.out.println is used

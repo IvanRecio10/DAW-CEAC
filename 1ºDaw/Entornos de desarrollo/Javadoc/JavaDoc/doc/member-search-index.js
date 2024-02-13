@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"clases","c":"Cliente","l":"AumentarSaldo(int)"},{"p":"clases","c":"Cliente","l":"Cliente(String, int, int, double)","u":"%3Cinit%3E(java.lang.String,int,int,double)"},{"p":"clases","c":"Cliente","l":"getId()"},{"p":"clases","c":"Cliente","l":"getSaldo()"}];updateSearchResults();

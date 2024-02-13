@@ -1,0 +1,83 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Calibri";
+}
+body{
+	background-color: #F0B27A;
+}
+.navegador{
+	background-color: grey;
+	border: 2px solid #000;
+	text-align: right;
+}
+.buscador{
+	background-color: black;
+	border-radius: 5px;
+}
+
+.cajas{
+	width: 68%;
+	display: inline-block;
+	vertical-align: top;
+}
+.caja{
+	display: inline-block;
+	vertical-align: top;
+	width: 200px;
+	height: 180px;
+	text-align: center;
+}
+.margenDer{
+}
+.blanco{
+	background-color: white;
+}
+.verde{
+	background-color: green;
+}
+.naranja{
+	background-color: orange;
+}
+.rojo{
+	background-color: red;
+}
+.azul{
+	background-color: blue;
+}
+.morado{
+	background-color: purple;
+}
+.gris{
+	background-color: #7F8C8D;
+}
+.verdeClaro{
+	background-color: #2ECC71;
+}
+.amarillo{
+	background-color: #F7DC6F;
+}
+.turquesa{
+	background-color: #48C9B0;
+}
+.rosa{
+	background-color: #D954CD;
+}
+.naranjaClaro{
+	background-color: #F8C471;
+}
+.azulClaro{
+	background-color: #3498DB;
+}
+.tareas{
+	margin-right: 10px;
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+.centrado{
+	text-align: center;
+}
+.texto{
+	text-align: left;
+}

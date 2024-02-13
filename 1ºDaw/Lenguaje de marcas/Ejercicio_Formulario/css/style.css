@@ -1,0 +1,47 @@
+*{
+	font-family: "Calibri";
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: black;
+	margin: 0 auto;
+}
+h2{
+	text-align: center;
+	font-size: 250%;
+	color: #AED6F1;
+}
+p{
+	padding: .3em;
+	text-align: center;
+	color: #AED6F1;
+}
+input{
+	border: 0px;
+	border-radius: .3em;
+	margin: 0 auto;
+	margin-top: 1em;
+	padding: .3em;
+	display: block;
+	width: 60%;
+	border-radius: .1em;
+}
+.azul_oscuro{
+	margin: 0 auto;
+	padding: 1em;
+	margin-top: 7em;
+	width: 40%;
+	background: #1F618D;
+}
+.formulario{
+	border-radius: .5em;
+	box-shadow: 0px 0px 10px;
+	margin: 0 auto;
+	width: 50%;
+	background: #2E86C1  ;
+	margin-top: 1em;
+}
+.boton{
+	background-color: #AED6F1;
+}

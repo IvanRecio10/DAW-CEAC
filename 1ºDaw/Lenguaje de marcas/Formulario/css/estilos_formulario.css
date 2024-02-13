@@ -1,0 +1,19 @@
+*{
+	font-family: "Calibri";
+	margin: 0;
+	padding: 0;
+}
+body{
+	margin: 0 auto;
+	width: 80%;
+}
+label{
+	display: block;
+	margin-top: .3em;
+}
+input{
+	width: 30%;
+}
+.botones{
+	display: block;
+}

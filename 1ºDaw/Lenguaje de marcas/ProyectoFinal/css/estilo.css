@@ -1,0 +1,29 @@
+.borde_fondo{
+	background-color: #2A2A26;
+	box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
+}
+.tipo_letra{
+	font-family: "Impact";
+}
+.color_letra{
+	color: #FFF;
+}
+.sinBorde{
+	border: none;
+}
+.tamaño_footer{
+	width: 15%;
+	text-align: center;
+}
+.alineado{
+	text-align: center;
+}
+.fondo{
+	background-color: #D0D3D4;
+}
+.texto{
+	border: 1px solid #000;
+	border-radius: .5em;
+	text-align: center;
+
+}

@@ -1,0 +1,20 @@
+*{
+	font-family: "Calibri";
+	margin: 0;
+	padding: 0;
+}
+p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.coche{
+	text-align: center;
+	display: inline-block;
+	margin-right: 1em;
+	vertical-align: top;
+	width: 15%;
+}
+.coche img{
+	width: 100%;
+}

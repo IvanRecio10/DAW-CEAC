@@ -1,0 +1,23 @@
+/*Las @font-face se ponen todas juntas al principio y podremos tener tantas tipografias como queramos.*/
+@font-face {
+    font-family: 'delius_swash_capsregular';
+    src: url('../fuentes/DeliusSwashCaps/deliusswashcaps-regular-webfont.woff2') format('woff2'),
+         url('../fuentes/DeliusSwashCaps/deliusswashcaps-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'silkscreennormal';
+    src: url('../fuentes/slkscr/slkscr-webfont.woff2') format('woff2'),
+         url('../fuentes/slkscr/slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+    font-family: 'delius_swash_capsregular';
+}
+h1{
+   font-family: 'silkscreennormal';
+}

@@ -1,0 +1,64 @@
+*{
+	font-family: "Calibri";
+	margin: 0;
+	padding: 0;
+}
+nav{
+	background: #EAECEE;
+	text-align: center;
+	padding: 1.1em;
+}
+nav a:link{
+	color: #0927D1;
+	margin: 1em;
+	padding: 1.1em;
+}
+nav a:hover{
+	background: #F60;
+	transition: 1.5s;
+}
+a:link{
+	margin: 1em;
+	text-decoration: none;
+}
+h1{
+	font-size: 300%;
+	text-align: center;
+	padding: .3em;
+	color: #0927D1;
+}
+main{
+	text-align: center;
+}
+.naranja{
+	color: #F60;
+}
+.img-centrada{
+	text-align: center;
+	padding: .5em;
+}
+.centrado{
+	text-align: center;
+	padding: .5em;
+}
+.grande{
+	font-size: 170%;
+}
+.margen-arriba-abajo{
+	padding: 1em;
+}
+.fila{
+	margin: 0 auto;
+	text-align: center;
+}
+.ciclo{
+	border: 3px solid #000000;
+	border-radius: .7em;
+	margin: 2.5em;
+	display: inline-block;
+	box-shadow: 3px 3px 3px 3px rgba(32,32,32,0.3);
+}
+.texto-ciclo{
+	color: #0927D1;
+	font-size: 150%;
+}

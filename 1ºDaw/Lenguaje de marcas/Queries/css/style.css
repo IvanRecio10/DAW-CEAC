@@ -1,0 +1,42 @@
+*{
+	font-family: "Calibri";
+	margin: 0;
+	padding: 0;
+}
+h1{
+	background-color: cornflowerblue;
+}
+.coche{
+	text-align: center;
+	display: inline-block;
+	margin-right: 1em;
+	vertical-align: top;
+	width: 15%;
+}
+.coche img{
+	width: 100%;
+}
+
+/*--------------------------------------------------------*/
+
+@media(max-width: 800px){
+	h1{
+		background-color: darkred;
+	}
+	.coche{
+		display: block;
+		width: 100%;
+	}
+}
+
+@media(min-width: 801px) and (max-width: 1000px){
+	h1{
+		background-color: green;
+	}
+}
+
+@media(min-width: 1001px){
+	h1{
+		background-color: antiquewhite;
+	}
+}
